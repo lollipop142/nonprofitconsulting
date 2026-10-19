@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jill LaLonde | Nonprofit Consulting</title>
+<meta name="description" content="I help mission-driven organizations navigate complexity, strengthen how they operate, and turn strategy into meaningful action.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/main.css?v=20261019-home5">
+<link rel="stylesheet" href="css/pages.css?v=20261019-home5">
+
+
+<style id="jill-refined-color-palette">
+/* =========================================================
+   REFINED BRAND COLOR SYSTEM
+   Design/spacing/content are unchanged — color only.
+   ========================================================= */
+:root {
+    --brand-navy: #17364D;
+    --brand-blue: #4F7F9B;
+    --brand-soft-blue: #DCE9EF;
+    --brand-cream: #F7F3EB;
+    --brand-warm-white: #FCFAF6;
+    --brand-gold: #DDB875;
+    --brand-brown: #765B46;
+    --brand-brown-light: #B89A7A;
+    --brand-ink: #24333D;
+    --brand-muted: #667680;
+}
+
+/* Base */
+html,
+body,
+.page {
+    background: var(--brand-warm-white) !important;
+    color: var(--brand-ink) !important;
+}
+
+body {
+    background-color: var(--brand-warm-white) !important;
+}
+
+/* Header / navigation */
+.header {
+    background: rgba(252, 250, 246, 0.96) !important;
+    border-color: rgba(23, 54, 77, 0.12) !important;
+}
+
+.nav-link,
+.site-wordmark,
+.wm-name {
+    color: var(--brand-navy) !important;
+}
+
+.wm-sub {
+    color: var(--brand-brown) !important;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link[aria-current="page"] {
+    color: var(--brand-blue) !important;
+}
+
+.nav-link-call,
+.mobile-menu-cta {
+    background: var(--brand-navy) !important;
+    color: #FFFFFF !important;
+    border-color: var(--brand-navy) !important;
+}
+
+.nav-link-call:hover,
+.mobile-menu-cta:hover {
+    background: var(--brand-blue) !important;
+    border-color: var(--brand-blue) !important;
+    color: #FFFFFF !important;
+}
+
+.menu-icon span {
+    background: var(--brand-navy) !important;
+}
+
+.mobile-menu {
+    background: var(--brand-cream) !important;
+}
+
+.mobile-menu a {
+    color: var(--brand-navy) !important;
+}
+
+/* Hero */
+.hero,
+.hero-stage {
+    background: var(--brand-warm-white) !important;
+}
+
+.hero-card {
+    background: var(--brand-navy) !important;
+}
+
+.hero-content,
+.hero-content * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-heading,
+.home-hero-heading {
+    color: var(--brand-cream) !important;
+}
+
+.hero-accent-text {
+    color: var(--brand-gold) !important;
+}
+
+.hero-description,
+.home-hero-description {
+    color: rgba(255,255,255,.86) !important;
+}
+
+.photo-glow {
+    background: rgba(221, 184, 117, 0.30) !important;
+}
+
+.image-fade {
+    background: linear-gradient(
+        to right,
+        rgba(220, 233, 239, 0) 0%,
+        rgba(220, 233, 239, 0.12) 55%,
+        var(--brand-soft-blue) 100%
+    ) !important;
+}
+
+/* Buttons */
+.button,
+.home-primary-button,
+.home-contact-submit {
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease !important;
+}
+
+.button-discovery {
+    background: var(--brand-gold) !important;
+    color: var(--brand-navy) !important;
+    border-color: var(--brand-gold) !important;
+}
+
+.button-discovery:hover {
+    background: #E7C98F !important;
+    color: var(--brand-navy) !important;
+    border-color: #E7C98F !important;
+}
+
+.home-primary-button,
+.home-contact-submit {
+    background: var(--brand-navy) !important;
+    color: #FFFFFF !important;
+    border-color: var(--brand-navy) !important;
+}
+
+.home-primary-button:hover,
+.home-contact-submit:hover {
+    background: var(--brand-blue) !important;
+    border-color: var(--brand-blue) !important;
+}
+
+.button-approach {
+    background: transparent !important;
+    color: #FFFFFF !important;
+    border-color: rgba(255,255,255,.55) !important;
+}
+
+.button-approach:hover {
+    background: rgba(255,255,255,.10) !important;
+    color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+}
+
+.home-services-intro-button {
+    background: transparent !important;
+    color: var(--brand-navy) !important;
+    border-color: var(--brand-navy) !important;
+}
+
+.button-approach:hover,
+.home-services-intro-button:hover {
+    background: var(--brand-gold) !important;
+    color: var(--brand-navy) !important;
+    border-color: var(--brand-gold) !important;
+}
+
+/* Central message — preserve the original animation, only correct the colors */
+.home-message {
+    background: var(--brand-navy) !important;
+}
+
+.home-message .message-line {
+    text-shadow: none !important;
+}
+
+.home-message .message-line--base {
+    color: var(--brand-cream) !important;
+}
+
+.home-message .message-line--offset-one {
+    color: var(--brand-gold) !important;
+}
+
+.home-message .message-line--offset-two {
+    color: #8FC0D8 !important;
+}
+
+.home-message .message-line--offset-three {
+    color: var(--brand-cream) !important;
+}
+
+.home-message .message-line--final {
+    color: #FFFFFF !important;
+    background: var(--brand-brown) !important;
+}
+
+/* Main content sections */
+.home-complexity,
+.home-services,
+.home-story-stack {
+    background: var(--brand-warm-white) !important;
+}
+
+.home-section-title,
+.home-story-title,
+.service-content h2,
+.service-content h3 {
+    color: var(--brand-navy) !important;
+}
+
+.home-copy-stack,
+.home-story-copy,
+.home-story-text,
+.home-services-intro-copy,
+.service-content p {
+    color: var(--brand-ink) !important;
+}
+
+.home-copy-emphasis,
+.home-story-emphasis,
+.home-services-kicker {
+    color: var(--brand-brown) !important;
+}
+
+/* Service cards */
+.service-feature-inner {
+    background: var(--brand-cream) !important;
+    border-color: rgba(23, 54, 77, 0.12) !important;
+}
+
+.service-index {
+    color: var(--brand-brown) !important;
+}
+
+.service-feature--01 .service-blob,
+.service-feature--03 .service-blob,
+.service-feature--05 .service-blob {
+    background: var(--brand-soft-blue) !important;
+}
+
+.service-feature--02 .service-blob,
+.service-feature--04 .service-blob {
+    background: #EEE1CB !important;
+}
+
+/* Story cards */
+.home-story-card {
+    background: var(--brand-cream) !important;
+}
+
+.home-story-card--experience {
+    background: var(--brand-soft-blue) !important;
+}
+
+.home-story-card--lasting {
+    background: #EFE2CD !important;
+}
+
+/* Final CTA / contact */
+.home-final-cta,
+.home-contact-cta {
+    background: var(--brand-navy) !important;
+}
+
+.home-contact-cta-inner,
+.home-contact-content,
+.home-contact-intro {
+    color: #FFFFFF !important;
+}
+
+.home-contact-cta h2,
+.home-contact-cta h3,
+.home-final-cta h2,
+.home-final-cta h3 {
+    color: #FFFFFF !important;
+}
+
+.home-contact-shape--one {
+    background: rgba(221, 184, 117, 0.26) !important;
+}
+
+.home-contact-shape--two {
+    background: rgba(118, 91, 70, 0.25) !important;
+}
+
+/* Footer */
+.site-footer {
+    background: #102C3E !important;
+    color: rgba(255,255,255,.86) !important;
+}
+
+.site-footer a,
+.site-footer-brand,
+.site-footer-tagline,
+.site-footer-connect-label {
+    color: rgba(255,255,255,.90) !important;
+}
+
+.site-footer a:hover {
+    color: var(--brand-gold) !important;
+}
+
+.site-footer-bottom {
+    border-color: rgba(255,255,255,.13) !important;
+}
+
+/* Text selection */
+::selection {
+    background: var(--brand-gold);
+    color: var(--brand-navy);
+}
+
+/* High-specificity contrast fixes. These do not touch transforms, transitions,
+   keyframes, JS classes, or any animation timing. */
+body .hero .hero-card {
+    background-color: var(--brand-navy) !important;
+}
+body .hero .hero-card .home-hero-heading {
+    color: var(--brand-cream) !important;
+}
+body .hero .hero-card .home-hero-heading .hero-accent-text {
+    color: var(--brand-gold) !important;
+}
+body .hero .hero-card .home-hero-description {
+    color: rgba(255,255,255,.86) !important;
+}
+body .hero .hero-card .button-discovery {
+    background-color: var(--brand-gold) !important;
+    border-color: var(--brand-gold) !important;
+    color: var(--brand-navy) !important;
+}
+body .hero .hero-card .button-approach {
+    background-color: transparent !important;
+    border-color: rgba(255,255,255,.58) !important;
+    color: #fff !important;
+}
+body .home-message .message-line.message-line--base {
+    color: var(--brand-cream) !important;
+}
+body .home-message .message-line.message-line--offset-one {
+    color: var(--brand-gold) !important;
+}
+body .home-message .message-line.message-line--offset-two {
+    color: #8FC0D8 !important;
+}
+body .home-message .message-line.message-line--offset-three {
+    color: var(--brand-cream) !important;
+}
+body .home-message .message-line.message-line--final {
+    color: #fff !important;
+    background-color: var(--brand-brown) !important;
+}
+</style>
+
+
+<style id="central-message-premium-fix">
+/* =========================================================
+   PREMIUM FIX — CENTRAL MESSAGE SECTION
+   Keeps the existing animation intact.
+   This only improves the color system and readability.
+   ========================================================= */
+body .home-message {
+    background: #17364D !important;
+}
+
+body .home-message .message-line {
+    text-shadow: none !important;
+}
+
+body .home-message .message-line.message-line--base,
+body .home-message .message-line.message-line--offset-three {
+    color: #F7F3EB !important;
+}
+
+body .home-message .message-line.message-line--offset-one {
+    color: #E6C27A !important;
+    background: rgba(11, 39, 60, 0.24) !important;
+}
+
+body .home-message .message-line.message-line--offset-two {
+    color: #AFCFE0 !important;
+}
+
+body .home-message .message-line.message-line--final {
+    color: #FFFFFF !important;
+    background: #9A7558 !important;
+}
+</style>
+
+
+<style id="central-message-light-final">
+/* =========================================================
+   CENTRAL MESSAGE — LIGHT PREMIUM VERSION
+   Existing animation is preserved. Colors only.
+   ========================================================= */
+body .home-message {
+    background: #FCFAF6 !important;
+}
+
+body .home-message .message-line {
+    text-shadow: none !important;
+}
+
+/* I help mission-driven organizations */
+body .home-message .message-line.message-line--base {
+    color: #17364D !important;
+    background: transparent !important;
+}
+
+/* navigate complexity */
+body .home-message .message-line.message-line--offset-one {
+    color: #B88646 !important;
+    background: transparent !important;
+}
+
+/* strengthen how they operate */
+body .home-message .message-line.message-line--offset-two {
+    color: #4F7F9B !important;
+    background: transparent !important;
+}
+
+/* and turn strategy into */
+body .home-message .message-line.message-line--offset-three {
+    color: #17364D !important;
+    background: transparent !important;
+}
+
+/* meaningful action */
+body .home-message .message-line.message-line--final {
+    color: #FFFFFF !important;
+    background: #765B46 !important;
+}
+</style>
+
+
+<style id="central-message-minimal-color-fix">
+/* =========================================================
+   CENTRAL MESSAGE — MINIMAL PREMIUM COLOR SYSTEM
+   Keeps all existing animation, transitions, timing,
+   transforms, and JS behavior intact.
+   ========================================================= */
+
+body .home-message {
+    background: #FCFAF6 !important;
+}
+
+body .home-message .message-line {
+    text-shadow: none !important;
+    background: transparent !important;
+}
+
+/* I help mission-driven organizations */
+body .home-message .message-line.message-line--base {
+    color: #17364D !important;
+}
+
+/* navigate complexity */
+body .home-message .message-line.message-line--offset-one {
+    color: #C99A52 !important;
+}
+
+/* strengthen how they operate */
+body .home-message .message-line.message-line--offset-two {
+    color: #17364D !important;
+}
+
+/* and turn strategy into */
+body .home-message .message-line.message-line--offset-three {
+    color: #17364D !important;
+}
+
+/* meaningful action */
+body .home-message .message-line.message-line--final {
+    color: #17364D !important;
+    background: transparent !important;
+}
+</style>
+
+
+<style id="central-message-blue-editorial-fix">
+/* =========================================================
+   CENTRAL MESSAGE — BLUE EDITORIAL VERSION
+   SAME LAYOUT / SAME ANIMATION
+   Only color treatment is changed.
+   ========================================================= */
+
+body .home-message {
+    background: #F5F8FA !important;
+}
+
+body .home-message .message-line {
+    text-shadow: none !important;
+}
+
+/* I help mission-driven organizations */
+body .home-message .message-line.message-line--base {
+    color: #17364D !important;
+    background: transparent !important;
+}
+
+/* navigate complexity */
+body .home-message .message-line.message-line--offset-one {
+    color: #FFFFFF !important;
+    background: #17364D !important;
+}
+
+/* strengthen how they operate */
+body .home-message .message-line.message-line--offset-two {
+    color: #3F7EA3 !important;
+    background: transparent !important;
+}
+
+/* and turn strategy into */
+body .home-message .message-line.message-line--offset-three {
+    color: #17364D !important;
+    background: transparent !important;
+}
+
+/* meaningful action */
+body .home-message .message-line.message-line--final {
+    color: #FFFFFF !important;
+    background: #2F6F94 !important;
+}
+</style>
+
+
+<style id="services-button-arrow-fix">
+/* =========================================================
+   WAYS TO WORK BUTTON — ARROW COLOR FIX
+   Keeps all existing layout and animation.
+   ========================================================= */
+
+.home-services-intro-button,
+.home-services-intro-button span {
+    color: #17364D !important;
+}
+
+.home-services-intro-button span {
+    opacity: 1 !important;
+}
+
+.home-services-intro-button:hover,
+.home-services-intro-button:hover span {
+    color: #17364D !important;
+}
+</style>
+
+
+<style id="hero-buttons-spacing-fix">
+/* =========================================================
+   HERO BUTTONS — CLOSER, BALANCED, CONSISTENT
+   ========================================================= */
+body .hero .hero-card .hero-buttons {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+    margin-top: 30px !important;
+}
+
+body .hero .hero-card .hero-buttons .button {
+    min-height: 58px !important;
+    margin: 0 !important;
+    padding: 0 28px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 3px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+}
+
+body .hero .hero-card .button-discovery {
+    min-width: 294px !important;
+}
+
+body .hero .hero-card .button-approach {
+    min-width: 220px !important;
+}
+
+@media (max-width: 760px) {
+    body .hero .hero-card .hero-buttons {
+        gap: 12px !important;
+        margin-top: 24px !important;
+    }
+
+    body .hero .hero-card .hero-buttons .button {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+}
+</style>
+
+
+<style id="hero-jill-photo-bigger-higher-final">
+/* =========================================================
+   HERO PORTRAIT — BIGGER + HIGHER BUT GROUNDED (desktop/tablet)
+   Mobile is handled in "home-mobile-hero-portrait-focus" below.
+   ========================================================= */
+
+body .hero .hero-card .hero-visual {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+body .hero .hero-card .jill-image {
+    position: absolute !important;
+    left: 50% !important;
+    bottom: -14px !important;
+
+    width: auto !important;
+    height: 86% !important;
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center bottom !important;
+
+    transform: translateX(-50%) scale(1.16) !important;
+    transform-origin: center bottom !important;
+
+    z-index: 2 !important;
+}
+
+body .hero .hero-card .photo-glow {
+    z-index: 1 !important;
+}
+
+body .hero .hero-card .image-fade {
+    z-index: 3 !important;
+    pointer-events: none !important;
+}
+
+@media (max-width: 1000px) {
+    body .hero .hero-card .jill-image {
+        height: 89% !important;
+        bottom: -10px !important;
+        transform: translateX(-50%) scale(1.10) !important;
+    }
+}
+</style>
+
+
+<style id="final-cta-dark-brown-heading-fix">
+/* FINAL CTA HEADING — ESPRESSO BROWN */
+body .home-contact-cta h2,
+body .home-final-cta h2 {
+    color: #261B16 !important;
+}
+</style>
+
+
+<style id="home-mobile-photo-fill-final">
+/* =========================================================
+   MOBILE — STORY PHOTOS FULL CONTAINER
+   Fixes Executive Experience / Mission photo sizing on phones.
+   ========================================================= */
+@media (max-width: 760px) {
+
+    .home-story-stack {
+        padding: 56px 12px !important;
+    }
+
+    .home-story-card {
+        margin-bottom: 18px !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+    }
+
+    .home-story-card-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+        min-height: 0 !important;
+    }
+
+    .home-story-photo {
+        order: 1 !important;
+        position: relative !important;
+        width: 100% !important;
+        height: 330px !important;
+        min-height: 330px !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        align-self: stretch !important;
+    }
+
+    .home-story-photo img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        max-height: none !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: scale(1.12) !important;
+        transform-origin: center center !important;
+    }
+
+    .home-story-card--experience .home-story-photo img {
+        object-position: center 50% !important;
+        transform: scale(1.18) !important;
+    }
+
+    .home-story-card--lasting .home-story-photo img {
+        object-position: center center !important;
+        transform: scale(1.12) !important;
+    }
+
+    .home-story-text {
+        order: 2 !important;
+        width: 100% !important;
+        padding: 34px 24px 38px !important;
+    }
+
+    .home-story-title {
+        margin-top: 0 !important;
+        font-size: clamp(2rem, 9vw, 2.65rem) !important;
+        line-height: 1.04 !important;
+    }
+
+    .home-story-copy p {
+        font-size: .95rem !important;
+        line-height: 1.68 !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .home-story-photo {
+        height: 285px !important;
+        min-height: 285px !important;
+    }
+
+    .home-story-text {
+        padding: 30px 20px 34px !important;
+    }
+}
+</style>
+
+
+<style id="mobile-story-photo-first-final">
+/* MOBILE — always show the story image before the text */
+@media (max-width: 760px) {
+    body .home-story-card .home-story-card-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+
+    body .home-story-card .home-story-photo,
+    body .home-story-card--experience .home-story-photo,
+    body .home-story-card--lasting .home-story-photo {
+        order: 1 !important;
+        width: 100% !important;
+        height: 330px !important;
+        min-height: 330px !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+    }
+
+    body .home-story-card .home-story-text,
+    body .home-story-card--experience .home-story-text,
+    body .home-story-card--lasting .home-story-text {
+        order: 2 !important;
+        width: 100% !important;
+    }
+
+    body .home-story-card .home-story-photo img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        max-height: none !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+}
+
+@media (max-width: 390px) {
+    body .home-story-card .home-story-photo {
+        height: 285px !important;
+        min-height: 285px !important;
+    }
+}
+</style>
+
+
+<style id="home-mobile-hero-portrait-focus">
+/* =========================================================
+   MOBILE HERO — PORTRAIT FIRST, SOFT FADE INTO NAVY
+   Jill's photo is the focus: bigger, centered on her face,
+   and blended into the navy text panel (no hard line).
+   Headline and copy are smaller so the card isn't a wall of text.
+   ========================================================= */
+@media (max-width: 760px) {
+
+    /* Even side spacing (the card was sitting off-center) */
+    body .hero .hero-stage {
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    body .hero .hero-card {
+        display: flex !important;
+        flex-direction: column !important;
+        width: auto !important;
+        max-width: none !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+        border-radius: 18px !important;
+        overflow: hidden !important;
+        background: #17364D !important;
+    }
+
+    body .hero .hero-card .hero-visual {
+        order: 1 !important;
+        position: relative !important;
+        width: 100% !important;
+        height: 400px !important;
+        min-height: 400px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        overflow: hidden !important;
+        clip-path: inset(0) !important;
+    }
+
+    /* Bigger, centered on her face, shoulders run off the bottom */
+    body .hero .hero-card .jill-image {
+        left: 50% !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: 0 !important;
+        width: auto !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        object-position: center bottom !important;
+        transform: translateX(-50%) scale(1.14) !important;
+        transform-origin: center 30% !important;
+    }
+
+    /* Soft fade from the photo into the navy panel */
+    body .hero .hero-card .image-fade {
+        display: block !important;
+        position: absolute !important;
+        inset: 0 !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        margin: 0 !important;
+        transform: none !important;
+        opacity: 1 !important;
+        z-index: 3 !important;
+        background: linear-gradient(
+            180deg,
+            rgba(23,54,77,0) 0%,
+            rgba(23,54,77,0) 50%,
+            rgba(36,70,96,.03) 55%,
+            rgba(34,68,94,.08) 60%,
+            rgba(32,66,91,.15) 65%,
+            rgba(30,63,88,.25) 70%,
+            rgba(28,61,85,.37) 75%,
+            rgba(26,59,82,.51) 80%,
+            rgba(25,57,80,.65) 85%,
+            rgba(24,56,79,.78) 89%,
+            rgba(23,55,78,.89) 93%,
+            rgba(23,54,77,.96) 97%,
+            #17364D 100%
+        ) !important;
+    }
+
+    body .hero .hero-card .hero-content {
+        order: 2 !important;
+        position: relative !important;
+        z-index: 4 !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 4px 22px 28px !important;
+        border: 0 !important;
+        background: transparent !important;
+    }
+
+    body .hero .hero-card .home-hero-heading {
+        max-width: none !important;
+        margin: 0 !important;
+        font-size: clamp(1.8rem, 7.4vw, 2.3rem) !important;
+        line-height: 1.05 !important;
+        letter-spacing: -.035em !important;
+        text-wrap: balance !important;
+    }
+
+    body .hero .hero-card .home-hero-description {
+        max-width: none !important;
+        margin: 14px 0 0 !important;
+        font-size: .9rem !important;
+        line-height: 1.6 !important;
+    }
+
+    body .hero .hero-card .hero-buttons {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        flex-wrap: nowrap !important;
+        gap: 9px !important;
+        margin-top: 20px !important;
+    }
+
+    body .hero .hero-card .hero-buttons .button {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 50px !important;
+        padding: 0 16px !important;
+        border-radius: 8px !important;
+        font-size: .84rem !important;
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 390px) {
+
+    body .hero .hero-stage {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    body .hero .hero-card .hero-visual {
+        height: 350px !important;
+        min-height: 350px !important;
+    }
+
+    body .hero .hero-card .hero-content {
+        padding: 0 18px 24px !important;
+    }
+
+    body .hero .hero-card .home-hero-heading {
+        font-size: 1.72rem !important;
+    }
+}
+</style>
+
+
+<style id="home-mobile-cta-portrait">
+/* =========================================================
+   CLOSING CTA — MOBILE: bigger portrait
+   Same treatment as Work With Me, Selected Work and Resources:
+   text and button on top, then Jill's photo filling the full
+   width of the card, flush on the bottom edge.
+   ========================================================= */
+@media (max-width: 767px) {
+
+    body .home-contact-cta .home-contact-cta-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding-bottom: 0 !important;
+        overflow: hidden !important;
+    }
+
+    body .home-contact-cta .home-contact-content {
+        order: 1 !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    body .home-contact-cta .home-contact-visual {
+        order: 2 !important;
+        position: relative !important;
+        inset: auto !important;
+        width: 100% !important;
+        max-width: none !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 32px 0 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    body .home-contact-cta .home-contact-shape {
+        display: none !important;
+    }
+
+    body .home-contact-cta .home-contact-portrait {
+        position: relative !important;
+        inset: auto !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        height: auto !important;
+        max-height: none !important;
+        margin: 0 auto !important;
+        object-fit: contain !important;
+        object-position: center bottom !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 560px) {
+    body .home-contact-cta .home-contact-submit {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 0 16px !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        font-size: 14px !important;
+        white-space: nowrap !important;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+<header class="header" id="siteHeader">
+
+    <nav class="header-nav header-nav-left" aria-label="Primary navigation left">
+        <a href="index.html" class="nav-link" aria-current="page">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="work-with-me.html" class="nav-link">Work With Me</a>
+        <a href="selected-work.html" class="nav-link">Selected Work</a>
+    </nav>
+
+    <a href="index.html" class="brand brand-wordmark site-wordmark" aria-label="Jill LaLonde Nonprofit Consulting home">
+        <span class="wm-name">Jill LaLonde</span>
+        <span class="wm-sub">Nonprofit Consulting</span>
+    </a>
+
+    <nav class="header-nav header-nav-right" aria-label="Primary navigation right">
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="nav-link nav-link-call">Start a Conversation</a>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+            <span class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
+<nav class="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <a href="work-with-me.html">Work With Me</a>
+    <a href="selected-work.html">Selected Work</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="mobile-menu-cta">Start a Conversation</a>
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+<main class="hero" id="top">
+    <div class="hero-stage">
+        <section class="hero-card">
+
+            <div class="hero-visual">
+                <div class="photo-glow"></div>
+                <img
+                    src="jill.png"
+                    class="jill-image"
+                    alt="Jill LaLonde"
+                >
+                <div class="image-fade"></div>
+            </div>
+
+            <div class="hero-content">
+                <h1 class="hero-heading home-hero-heading">
+                    When your organization is facing complexity, <span class="hero-accent-text">I help you find a clearer way forward.</span>
+                </h1>
+
+                <p class="hero-description home-hero-description">
+                    I partner with mission-driven leaders and boards to strengthen strategy, leadership, governance, and organizational execution, so their organizations can navigate change and create lasting impact.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#services" class="button button-discovery">
+                        Explore how we can work together
+                    </a>
+                    <a href="contact.html" class="button button-approach">
+                        Start a conversation
+                    </a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</main>
+
+
+<!-- =========================================================
+     CENTRAL MESSAGE — EDITORIAL STATEMENT
+========================================================= -->
+<section class="home-message" aria-label="Central website message">
+    <div class="home-message-shell">
+        <div class="home-message-inner">
+            <p class="home-message-statement">
+                <span class="message-line message-line--base">I help mission-driven organizations</span>
+                <span class="message-line message-line--accent message-line--offset-one">navigate complexity,</span>
+                <span class="message-line message-line--accent message-line--offset-two">strengthen how they operate,</span>
+                <span class="message-line message-line--base message-line--offset-three">and turn strategy into</span>
+                <span class="message-line message-line--accent message-line--final">meaningful action.</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     ORGANIZATIONAL COMPLEXITY
+========================================================= -->
+<section class="home-complexity" id="about">
+    <div class="home-section-wrap home-complexity-grid">
+        <div class="home-complexity-photo-column">
+            <figure class="home-complexity-photo-wrap">
+                <img
+                    src="organization.png"
+                    alt="Strategic leadership and organizational direction represented through a refined chess network"
+                    class="home-complexity-photo"
+                >
+            </figure>
+        </div>
+
+        <div class="home-complexity-content">
+            <h2 class="home-section-title">
+                Your organization may have outgrown the way it has been working.
+            </h2>
+
+            <div class="home-copy-stack">
+                <p>
+                    Perhaps you are growing quickly, navigating a leadership transition, responding to a changing funding environment, or trying to turn an ambitious strategy into coordinated action.
+                </p>
+                <p>
+                    You may know something needs to change without yet knowing exactly what, or how to move it forward while managing everything already on your plate.
+                </p>
+                <p class="home-copy-emphasis">
+                    I help leaders step back, make sense of the whole organization, and determine what comes next. Then I work alongside them to make it real.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     WAYS TO WORK TOGETHER
+========================================================= -->
+<section class="home-services" id="services">
+    <div class="home-services-intro">
+        <div class="home-section-wrap">
+            <div class="home-services-head">
+                <p class="home-services-kicker">Ways to work</p>
+                <h2 class="home-section-title">Ways to work together</h2>
+                <p class="home-services-intro-copy">
+                    Flexible support for organizations navigating change, growth, complexity, and meaningful transformation.
+                </p>
+
+                <a href="work-with-me.html" class="home-services-intro-button">
+                    Explore ways to work together
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-feature-stack">
+        <article class="service-feature service-feature--01">
+            <div class="service-feature-inner">
+                <div class="service-visual" aria-hidden="true">
+                    <div class="service-blob">
+                        <svg viewBox="0 0 120 120" role="img" aria-label="Executive advisory icon">
+                            <circle cx="60" cy="60" r="38"></circle>
+                            <path d="M60 31v58M31 60h58"></path>
+                            <circle cx="60" cy="60" r="10"></circle>
+                            <path d="M60 22l6 9-6 9-6-9 6-9zM60 80l6 9-6 9-6-9 6-9zM22 60l9-6 9 6-9 6-9-6zM80 60l9-6 9 6-9 6-9-6z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <span class="service-index">01</span>
+                    <h3>Executive Advisory</h3>
+                    <p>A trusted thought partner for executives navigating consequential decisions, organizational complexity, and change.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="service-feature service-feature--02">
+            <div class="service-feature-inner">
+                <div class="service-visual" aria-hidden="true">
+                    <div class="service-blob">
+                        <svg viewBox="0 0 120 120" role="img" aria-label="Fractional leadership icon">
+                            <circle cx="60" cy="28" r="12"></circle>
+                            <circle cx="31" cy="80" r="12"></circle>
+                            <circle cx="89" cy="80" r="12"></circle>
+                            <path d="M54 40L38 68M66 40l16 28M43 80h34"></path>
+                            <path d="M60 52v26"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <span class="service-index">02</span>
+                    <h3>Fractional Leadership</h3>
+                    <p>Embedded COO/executive leadership to strengthen the organization, build internal capacity, and move critical priorities forward.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="service-feature service-feature--03">
+            <div class="service-feature-inner">
+                <div class="service-visual" aria-hidden="true">
+                    <div class="service-blob">
+                        <svg viewBox="0 0 120 120" role="img" aria-label="Strategic planning icon">
+                            <circle cx="60" cy="60" r="34"></circle>
+                            <circle cx="60" cy="60" r="20"></circle>
+                            <circle cx="60" cy="60" r="6"></circle>
+                            <path d="M60 18v12M60 90v12M18 60h12M90 60h12"></path>
+                            <path d="M84 36l-12 12"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <span class="service-index">03</span>
+                    <h3>Strategic Planning</h3>
+                    <p>Focused engagements that bring clarity to organizational direction, priorities, roles, decision-making, and execution.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="service-feature service-feature--04">
+            <div class="service-feature-inner">
+                <div class="service-visual" aria-hidden="true">
+                    <div class="service-blob">
+                        <svg viewBox="0 0 120 120" role="img" aria-label="Nonprofit mergers and strategic partnerships icon">
+                            <circle cx="44" cy="60" r="26"></circle>
+                            <circle cx="76" cy="60" r="26"></circle>
+                            <path d="M54 43c8 7 12 17 12 27 0 6-2 12-5 17"></path>
+                            <path d="M66 43c-8 7-12 17-12 27 0 6 2 12 5 17"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <span class="service-index">04</span>
+                    <h3>Nonprofit Mergers and Strategic Partnerships</h3>
+                    <p>Support exploring, assessing, and navigating mergers, shared services, and other forms of strategic partnership.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="service-feature service-feature--05">
+            <div class="service-feature-inner">
+                <div class="service-visual" aria-hidden="true">
+                    <div class="service-blob">
+                        <svg viewBox="0 0 120 120" role="img" aria-label="Workshops and retreats icon">
+                            <circle cx="38" cy="42" r="10"></circle>
+                            <circle cx="82" cy="42" r="10"></circle>
+                            <circle cx="60" cy="33" r="11"></circle>
+                            <path d="M22 84c2-15 9-23 21-23s19 8 21 23"></path>
+                            <path d="M56 84c2-15 9-23 21-23s19 8 21 23"></path>
+                            <path d="M38 88h44"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <span class="service-index">05</span>
+                    <h3>Workshops and Retreats</h3>
+                    <p>Thoughtfully designed and expertly facilitated sessions that help boards and teams engage in the conversations that matter, leaving with shared direction and clear next steps.</p>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="home-services-action-wrap">
+        <div class="home-section-wrap">
+            <div class="home-services-action">
+                <a href="work-with-me.html" class="home-primary-button">Explore ways to work together</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE + LASTING IMPACT — TWO SCROLLING PHOTO CARDS
+========================================================= -->
+<section class="home-story-stack" id="experience" aria-label="Experience and lasting impact">
+    <div class="home-story-stack-shell">
+
+        <article class="home-story-card home-story-card--experience">
+            <div class="home-story-card-inner">
+                <div class="home-story-text">
+                    <h2 class="home-story-title">
+                        Executive experience, practical follow-through.
+                    </h2>
+
+                    <div class="home-story-copy">
+                        <p>
+                            I bring nearly two decades of experience leading and advising mission-driven organizations across the United States and globally. I understand organizational complexity from the inside, not only as a consultant, but as an executive, fractional COO, interim leader, board partner, and educator.
+                        </p>
+                        <p class="home-story-emphasis">
+                            My work combines big-picture thinking with the ability to translate ideas into decisions, structures, and action.
+                        </p>
+                    </div>
+                </div>
+
+                <figure class="home-story-photo">
+                    <img
+                        src="executive.png"
+                        alt="Refined modern interior used as a temporary editorial placeholder"
+                        loading="lazy"
+                    >
+                </figure>
+            </div>
+        </article>
+
+        <article class="home-story-card home-story-card--lasting">
+            <div class="home-story-card-inner">
+                <figure class="home-story-photo">
+                    <img
+                        src="mission.png"
+                        alt="Contemporary architectural interior used as a temporary editorial placeholder"
+                        loading="lazy"
+                    >
+                </figure>
+
+                <div class="home-story-text">
+                    <h2 class="home-story-title">
+                        Great missions deserve organizations built to last.
+                    </h2>
+
+                    <div class="home-story-copy">
+                        <p>
+                            Lasting impact requires more than commitment to the mission, it requires an organization capable of carrying it forward. That means having clear strategy, strong leadership, and effective systems turn that commitment into meaningful, sustainable action.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+<section class="home-final-cta home-contact-cta" id="contact">
+    <div class="home-contact-cta-inner">
+
+        <div class="home-contact-visual" aria-hidden="true">
+            <div class="home-contact-shape home-contact-shape--one"></div>
+            <div class="home-contact-shape home-contact-shape--two"></div>
+            <img
+                src="jill-cta.png"
+                alt=""
+                class="home-contact-portrait"
+            >
+        </div>
+
+        <div class="home-contact-content">
+            <h2>You don’t need all the answers before reaching out.</h2>
+
+            <p class="home-contact-intro">
+                Helping leaders understand what they need, and shaping the right path forward, is an important part of my work.
+            </p>
+
+            <a href="contact.html" class="home-contact-submit">
+                Let’s talk
+                <span aria-hidden="true">→</span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer class="site-footer" aria-label="Site footer">
+    <div class="site-footer-inner">
+        <div class="site-footer-brand-wrap">
+            <a href="index.html" class="site-footer-brand site-wordmark" aria-label="Jill LaLonde Nonprofit Consulting home">
+                <span class="wm-name">Jill LaLonde</span>
+                <span class="wm-sub">Nonprofit Consulting</span>
+            </a>
+            <p class="site-footer-tagline">Strategic guidance for mission-driven leaders and organizations.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="work-with-me.html">Work With Me</a>
+            <a href="selected-work.html">Selected Work</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="site-footer-connect">
+            <span class="site-footer-connect-label">Connect</span>
+            <div class="site-footer-connect-links">
+                <a href="contact.html">Email</a>
+                <!-- Replace # with Jill's LinkedIn profile URL -->
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+        </div>
+
+        <a href="#top" class="site-footer-top">
+            Back to top <span aria-hidden="true">↑</span>
+        </a>
+    </div>
+
+    <div class="site-footer-bottom">
+        <span>© 2026 Jill LaLonde Nonprofit Consulting.</span>
+        <span>All rights reserved.</span>
+    </div>
+</footer>
+
+</div>
+
+<script src="js/site.js?v=20261019-home5"></script>
+
+</body>
+</html>

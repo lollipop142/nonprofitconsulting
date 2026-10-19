@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jill LaLonde | Nonprofit Consulting</title>
+<meta name="description" content="I help mission-driven organizations navigate complexity, strengthen how they operate, and turn strategy into meaningful action.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   JILL LALONDE — "FROM TANGLE TO CLEAR LINE"
+   A consultant's notebook: hand-drawn marks, paper, ink,
+   a bookshelf of services and a blueprint for what lasts.
+   ========================================================= */
+:root{
+    --paper:#F5EEE4;
+    --paper-deep:#ECE2D4;
+    --sheet:#FFFDF8;
+    --wall:#E4D6C3;
+    --ink:#13293D;
+    --ink-soft:#3D4F5F;
+    --blue:#2E5B82;
+    --blueprint:#1D4669;
+    --blue-mark:#B7CFE2;
+    --tan:#C9A27A;
+    --brass:#E7C07C;
+    --brown:#7A5638;
+    --muted:#6A5F57;
+    --line:#D8C9B6;
+
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Satoshi",Arial,sans-serif;
+    --hand:"Caveat","Bradley Hand",cursive;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+
+    --gutter:clamp(20px,4.5vw,72px);
+    --ease:cubic-bezier(.22,.8,.2,1);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+    margin:0;
+    min-width:320px;
+    overflow-x:hidden;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+}
+/* Paper grain over everything */
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:200;
+    pointer-events:none;
+    opacity:.07;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+body.menu-open{ overflow:hidden; }
+img{ display:block; max-width:100%; }
+a{ color:inherit; }
+h1,h2,h3,p{ margin:0; }
+h1,h2,h3{
+    font-family:var(--serif);
+    font-weight:400;
+    font-variation-settings:"SOFT" 50,"WONK" 1;
+    letter-spacing:-.02em;
+}
+em{ font-style:italic; }
+:focus-visible{ outline:2px dashed var(--blue); outline-offset:4px; }
+.wrap{
+    width:100%;
+    max-width:1320px;
+    margin:0 auto;
+    padding:0 var(--gutter);
+}
+.sr-only{
+    position:absolute;
+    width:1px; height:1px;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
+    white-space:nowrap;
+}
+
+/* Handwritten margin notes */
+.note{
+    display:inline-block;
+    font-family:var(--hand);
+    font-size:clamp(24px,2.1vw,30px);
+    font-weight:600;
+    line-height:1.1;
+    color:var(--blue);
+    transform:rotate(-3deg);
+}
+.note--brown{ color:var(--brown); }
+.note--brass{ color:var(--brass); }
+
+/* Hand-drawn strokes: paths use pathLength="1" and draw in when revealed */
+.js .draw{
+    stroke-dasharray:1;
+    stroke-dashoffset:1;
+    transition:stroke-dashoffset var(--dur,1.4s) var(--ease) var(--d,0s);
+}
+.js .in .draw,
+.js .draw.in{ stroke-dashoffset:0; }
+.js .rise{
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity .9s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s);
+}
+.js .rise.in,
+.js .in .rise{ opacity:1; transform:none; }
+
+/* "Stamp" button: flat ink block with an offset brass shadow */
+.stamp{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    min-height:56px;
+    padding:0 28px;
+    border:1.5px solid var(--ink);
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.01em;
+    text-decoration:none;
+    cursor:pointer;
+    box-shadow:5px 5px 0 var(--brass);
+    transition:transform .2s var(--ease),box-shadow .2s var(--ease);
+}
+.stamp:hover{ transform:translate(-2px,-2px); box-shadow:7px 7px 0 var(--brass); }
+.stamp:active{ transform:translate(3px,3px); box-shadow:2px 2px 0 var(--brass); }
+.stamp--light{ background:var(--paper); color:var(--ink); border-color:var(--paper); }
+.stamp[disabled]{ opacity:.7; cursor:wait; }
+
+/* Link with a wobbly hand-drawn underline */
+.scrawl-link{
+    position:relative;
+    display:inline-block;
+    padding:6px 0 10px;
+    color:var(--ink);
+    font-weight:700;
+    font-size:15px;
+    text-decoration:none;
+}
+.scrawl-link svg{
+    position:absolute;
+    left:-2%;
+    bottom:0;
+    width:104%;
+    height:10px;
+    overflow:visible;
+    fill:none;
+    stroke:var(--blue);
+    stroke-width:2;
+    stroke-linecap:round;
+}
+.scrawl-link svg path{
+    stroke-dasharray:1;
+    stroke-dashoffset:0;
+    transition:stroke-dashoffset .5s var(--ease);
+}
+.scrawl-link:hover svg path{ animation:redraw .7s var(--ease); }
+@keyframes redraw{ from{ stroke-dashoffset:1; } to{ stroke-dashoffset:0; } }
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.header{
+    position:sticky;
+    top:0;
+    z-index:60;
+    background:rgba(245,238,228,.95);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease;
+}
+.header.is-scrolled{ border-bottom-color:var(--line); }
+.header-inner{
+    height:84px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:28px;
+}
+.wordmark{
+    display:inline-flex;
+    flex-direction:column;
+    gap:6px;
+    line-height:1;
+    text-decoration:none;
+}
+.wordmark-name{
+    font-family:var(--serif);
+    font-variation-settings:"SOFT" 100,"WONK" 1;
+    font-size:26px;
+    font-weight:500;
+    letter-spacing:-.02em;
+    color:var(--ink);
+}
+.wordmark-sub{
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    color:var(--brown);
+}
+.nav{
+    display:flex;
+    align-items:center;
+    gap:34px;
+}
+.nav > a:not(.stamp){
+    font-size:15px;
+    font-weight:500;
+    text-decoration:none;
+    background:linear-gradient(var(--blue),var(--blue)) left 100% / 0 1.5px no-repeat;
+    transition:background-size .3s var(--ease);
+}
+.nav > a:not(.stamp):hover{ background-size:100% 1.5px; }
+.nav .stamp{ min-height:46px; padding:0 20px; font-size:14px; box-shadow:4px 4px 0 var(--brass); }
+.menu-toggle{
+    display:none;
+    padding:8px 0;
+    border:0;
+    background:none;
+    font-family:var(--hand);
+    font-size:28px;
+    font-weight:600;
+    color:var(--ink);
+    cursor:pointer;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+    position:relative;
+    padding:clamp(48px,6vw,96px) 0 clamp(80px,9vw,140px);
+}
+.hero-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);
+    gap:clamp(40px,5vw,88px);
+    align-items:start;
+}
+.hero-title{
+    font-size:clamp(46px,6.4vw,104px);
+    line-height:.98;
+    letter-spacing:-.035em;
+}
+.hero-title .soft{
+    font-style:italic;
+    font-weight:300;
+    color:var(--blue);
+}
+.tangle{
+    position:relative;
+    display:inline-block;
+    white-space:nowrap;
+}
+.tangle svg{
+    position:absolute;
+    left:-3%;
+    top:6%;
+    width:106%;
+    height:92%;
+    overflow:visible;
+    fill:none;
+    stroke:var(--blue);
+    stroke-width:4.5;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    opacity:.78;
+    pointer-events:none;
+}
+.clear-line{
+    position:relative;
+    display:inline-block;
+}
+.clear-line svg{
+    position:absolute;
+    left:0;
+    bottom:-.12em;
+    width:100%;
+    height:.36em;
+    overflow:visible;
+    fill:none;
+    stroke:var(--brass);
+    stroke-width:4;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+.hero-lede{
+    max-width:52ch;
+    margin-top:clamp(32px,3vw,44px);
+    color:var(--ink-soft);
+    font-size:clamp(17px,1.25vw,19px);
+}
+.hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:22px 34px;
+    margin-top:38px;
+}
+
+/* Taped photo print */
+.print-wrap{
+    position:relative;
+    margin-top:clamp(0px,2vw,24px);
+    padding:0 6% 0 4%;
+}
+.print{
+    position:relative;
+    margin:0;
+    padding:14px 14px 66px;
+    background:#fff;
+    box-shadow:
+        0 1px 2px rgba(19,41,61,.08),
+        0 18px 40px rgba(19,41,61,.14);
+    transform:rotate(2.4deg);
+}
+.print img{
+    width:100%;
+    height:auto;
+    aspect-ratio:4 / 4.6;
+    object-fit:cover;
+    object-position:50% 16%;
+}
+.print figcaption{
+    position:absolute;
+    left:18px;
+    right:18px;
+    bottom:16px;
+    font-family:var(--hand);
+    font-size:27px;
+    font-weight:600;
+    color:var(--ink);
+    text-align:center;
+}
+.tape{
+    position:absolute;
+    z-index:2;
+    width:110px;
+    height:30px;
+    background:rgba(231,214,180,.72);
+    box-shadow:0 1px 2px rgba(0,0,0,.06);
+    clip-path:polygon(3% 0,97% 4%,100% 50%,96% 100%,2% 96%,0 48%);
+}
+.tape--l{ top:-12px; left:2%; transform:rotate(-24deg); }
+.tape--r{ top:-10px; right:4%; transform:rotate(18deg); }
+.hello{
+    position:absolute;
+    left:-70px;
+    bottom:18%;
+    z-index:3;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+}
+.hello svg{
+    width:84px;
+    height:56px;
+    margin-top:2px;
+    margin-right:-34px;
+    fill:none;
+    stroke:var(--blue);
+    stroke-width:2;
+    stroke-linecap:round;
+}
+
+/* =========================================================
+   MANIFESTO
+   ========================================================= */
+.manifesto{
+    position:relative;
+    padding:clamp(90px,11vw,170px) 0;
+    background:var(--paper-deep);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+}
+.manifesto .note{
+    position:absolute;
+    top:clamp(36px,5vw,70px);
+    left:var(--gutter);
+}
+.manifesto-text{
+    font-family:var(--serif);
+    font-variation-settings:"SOFT" 50,"WONK" 1;
+    font-size:clamp(34px,5.4vw,88px);
+    font-weight:400;
+    line-height:1.12;
+    letter-spacing:-.03em;
+    color:var(--ink);
+}
+.manifesto-text > span{ display:block; }
+.manifesto-text .m2{ padding-left:9%; }
+.manifesto-text .m3{ padding-left:19%; }
+.manifesto-text .m4{ padding-left:4%; }
+.manifesto-text .m5{ padding-left:24%; }
+
+/* Marker highlight that sweeps in */
+.marker{
+    padding:0 .12em;
+    margin:0 -.06em;
+    color:inherit;
+    font-style:italic;
+    background-color:transparent;
+    background-image:linear-gradient(100deg,
+        rgba(231,192,124,0) 0%,
+        rgba(231,192,124,.85) 2%,
+        rgba(231,192,124,.62) 50%,
+        rgba(231,192,124,.8) 97%,
+        rgba(231,192,124,0) 100%);
+    background-repeat:no-repeat;
+    background-position:0 72%;
+    background-size:100% 52%;
+    -webkit-box-decoration-break:clone;
+    box-decoration-break:clone;
+    border-radius:.2em .5em .3em .6em;
+    transition:background-size 1.1s var(--ease) var(--d,0s);
+}
+.marker--blue{
+    background-image:linear-gradient(100deg,
+        rgba(183,207,226,0) 0%,
+        rgba(183,207,226,.95) 2%,
+        rgba(183,207,226,.75) 50%,
+        rgba(183,207,226,.9) 97%,
+        rgba(183,207,226,0) 100%);
+}
+.js .marker{ background-size:0 52%; }
+.js .in .marker{ background-size:100% 52%; }
+
+/* =========================================================
+   DIAGNOSIS — NOTEPAD
+   ========================================================= */
+.section{ padding:clamp(90px,10vw,160px) 0; }
+.diagnosis-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:clamp(48px,7vw,120px);
+    align-items:center;
+}
+.big-title{
+    font-size:clamp(38px,4.4vw,70px);
+    line-height:1.02;
+    letter-spacing:-.03em;
+}
+.big-title em{ font-weight:300; color:var(--blue); }
+.body-copy{
+    max-width:50ch;
+    margin-top:28px;
+    color:var(--ink-soft);
+}
+.notepad{
+    position:relative;
+    padding:58px 40px 46px 84px;
+    background-color:var(--sheet);
+    background-image:
+        linear-gradient(90deg,transparent 60px,rgba(196,96,78,.35) 60px,rgba(196,96,78,.35) 61.5px,transparent 61.5px),
+        repeating-linear-gradient(180deg,transparent 0,transparent 47px,#D5E1EB 47px,#D5E1EB 48px);
+    background-position:0 0,0 30px;
+    box-shadow:0 1px 2px rgba(19,41,61,.08),0 24px 50px rgba(19,41,61,.10);
+    transform:rotate(-1.2deg);
+}
+.notepad .tape{ top:-14px; left:50%; margin-left:-55px; transform:rotate(-3deg); }
+.notepad-head{
+    margin-bottom:6px;
+    font-family:var(--hand);
+    font-size:32px;
+    font-weight:600;
+    line-height:48px;
+    color:var(--brown);
+}
+.checklist{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.checklist li{
+    position:relative;
+    padding-left:44px;
+    font-family:var(--serif);
+    font-variation-settings:"SOFT" 50,"WONK" 1;
+    font-size:clamp(19px,1.6vw,23px);
+    line-height:48px;
+}
+.checklist svg{
+    position:absolute;
+    left:0;
+    top:11px;
+    width:28px;
+    height:28px;
+    overflow:visible;
+    fill:none;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+.checklist .box{ stroke:var(--ink-soft); stroke-width:1.6; }
+.checklist .tick{ stroke:var(--blue); stroke-width:2.8; }
+.pull{
+    position:relative;
+    margin-top:clamp(70px,8vw,120px);
+    padding-left:clamp(28px,4vw,64px);
+    max-width:960px;
+    font-family:var(--serif);
+    font-variation-settings:"SOFT" 50,"WONK" 1;
+    font-size:clamp(26px,2.7vw,40px);
+    font-style:italic;
+    font-weight:300;
+    line-height:1.3;
+    color:var(--ink);
+}
+.pull svg{
+    position:absolute;
+    left:0;
+    top:4px;
+    width:22px;
+    height:100%;
+    overflow:visible;
+    fill:none;
+    stroke:var(--brass);
+    stroke-width:3;
+    stroke-linecap:round;
+}
+.pull strong{ font-weight:400; font-style:normal; color:var(--blue); }
+
+/* =========================================================
+   SERVICES — BOOKSHELF
+   ========================================================= */
+.shelf-section{
+    padding:clamp(90px,10vw,150px) 0 clamp(70px,8vw,110px);
+    background:var(--wall);
+}
+.shelf-head{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:20px 40px;
+    margin-bottom:clamp(40px,5vw,64px);
+}
+.shelf-head .body-copy{ margin-top:18px; }
+.shelf-hint{ text-align:right; }
+.shelf-hint svg{
+    display:block;
+    width:70px;
+    height:50px;
+    margin:4px 0 0 auto;
+    fill:none;
+    stroke:var(--blue);
+    stroke-width:2;
+    stroke-linecap:round;
+}
+.shelf{
+    display:flex;
+    align-items:flex-end;
+    gap:8px;
+    height:clamp(500px,52vw,600px);
+    padding:0 8px;
+    container-type:inline-size;
+}
+.book{
+    --c:var(--ink);
+    --t:var(--paper);
+    display:flex;
+    flex:0 0 92px;
+    min-width:0;
+    height:100%;
+    overflow:hidden;
+    background:var(--c);
+    color:var(--t);
+    border-radius:3px 6px 2px 2px;
+    box-shadow:
+        inset 4px 0 0 rgba(255,255,255,.07),
+        inset -10px 0 18px rgba(0,0,0,.16),
+        6px 0 14px rgba(19,41,61,.10);
+    transition:flex-grow .75s var(--ease);
+}
+.book.is-open{ flex-grow:1; }
+.book:nth-child(1){ height:100%; }
+.book:nth-child(2){ height:93%; --c:#C9A27A; --t:#2A1D12; }
+.book:nth-child(3){ height:97%; --c:var(--blue); }
+.book:nth-child(4){ height:90%; --c:#EFE6D8; --t:var(--ink); }
+.book:nth-child(5){ height:95%; --c:#6E4B33; --t:#F7EBDD; }
+.book-spine{
+    position:relative;
+    flex:none;
+    width:92px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    padding:30px 0 34px;
+    border:0;
+    background:transparent;
+    color:inherit;
+    cursor:pointer;
+    font:inherit;
+}
+.book-spine::before,
+.book-spine::after{
+    content:"";
+    position:absolute;
+    left:16px;
+    right:16px;
+    height:7px;
+    border-top:1.5px solid currentColor;
+    border-bottom:1.5px solid currentColor;
+    opacity:.45;
+}
+.book-spine::before{ top:60px; }
+.book-spine::after{ bottom:62px; }
+.book-num{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:.08em;
+    opacity:.8;
+}
+.book-spine-title{
+    writing-mode:vertical-rl;
+    font-family:var(--serif);
+    font-variation-settings:"SOFT" 50,"WONK" 1;
+    font-size:22px;
+    line-height:1;
+    letter-spacing:-.01em;
+    white-space:nowrap;
+}
+.book-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    border:1.5px solid currentColor;
+    transition:background .3s ease;
+}
+.book.is-open .book-dot{ background:currentColor; }
+.book-page{
+    flex:1;
+    min-width:0;
+    overflow:hidden;
+    border-left:1px solid rgba(255,255,255,.12);
+}
+.book-page-inner{
+    /* fixed to the open width so text doesn't reflow while the book slides open */
+    width:calc(100cqw - 5 * 92px - 4 * 8px - 16px);
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:clamp(32px,3.5vw,52px);
+    opacity:0;
+    transition:opacity .35s ease;
+}
+.book.is-open .book-page-inner{
+    opacity:1;
+    transition:opacity .6s ease .3s;
+}
+.book-big-num{
+    font-family:var(--serif);
+    font-variation-settings:"SOFT" 100,"WONK" 1;
+    font-size:clamp(80px,9vw,140px);
+    font-style:italic;
+    font-weight:300;
+    line-height:.8;
+    opacity:.35;
+}
+.book-page h3{
+    font-size:clamp(30px,2.9vw,44px);
+    line-height:1.04;
+}
+.book-page p{
+    max-width:40ch;
+    margin-top:18px;
+    font-size:17px;
+    opacity:.86;
+}
+.book-link{
+    display:inline-block;
+    margin-top:26px;
+    font-family:var(--hand);
+    font-size:26px;
+    font-weight:600;
+    text-decoration:none;
+    border-bottom:1.5px solid currentColor;
+}
+.shelf-board{
+    height:18px;
+    margin:0 -12px;
+    background:linear-gradient(180deg,#8A6446 0%,#6E4B33 100%);
+    border-radius:2px;
+    box-shadow:0 14px 24px rgba(42,29,18,.22);
+}
+
+/* =========================================================
+   EXPERIENCE — SEATING CHART
+   ========================================================= */
+.seats-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+    gap:clamp(40px,6vw,100px);
+    align-items:center;
+}
+.seats svg{
+    width:100%;
+    height:auto;
+    overflow:visible;
+}
+.seats .table{
+    fill:#EADCC8;
+    stroke:var(--ink);
+    stroke-width:1.5;
+}
+.seats .table-inner{
+    fill:none;
+    stroke:var(--brown);
+    stroke-width:1;
+    stroke-dasharray:3 6;
+    opacity:.6;
+}
+.seats .chair{
+    fill:var(--sheet);
+    stroke:var(--ink);
+    stroke-width:1.5;
+    transition:fill .5s ease var(--d,0s);
+}
+.seats.in .chair{ fill:var(--blue-mark); }
+.seats .chair-label{
+    font-family:var(--hand);
+    font-size:34px;
+    font-weight:600;
+    fill:var(--blue);
+}
+.seats .center-label{
+    font-family:var(--hand);
+    font-size:30px;
+    font-weight:600;
+    fill:var(--brown);
+}
+.js .seats .seat{
+    opacity:0;
+    transition:opacity .6s ease var(--d,0s);
+}
+.js .seats.in .seat{ opacity:1; }
+.lead-line{
+    margin-top:26px;
+    padding-top:26px;
+    border-top:1px solid var(--line);
+    font-family:var(--serif);
+    font-variation-settings:"SOFT" 50,"WONK" 1;
+    font-size:clamp(22px,1.9vw,27px);
+    line-height:1.35;
+    color:var(--blue);
+}
+
+/* =========================================================
+   BUILT TO LAST — BLUEPRINT
+   ========================================================= */
+.blueprint{
+    position:relative;
+    padding:clamp(90px,10vw,150px) 0;
+    background-color:var(--blueprint);
+    background-image:
+        linear-gradient(rgba(255,255,255,.10) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.10) 1px,transparent 1px),
+        linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+    background-size:120px 120px,120px 120px,24px 24px,24px 24px;
+    color:#EAF1F7;
+    overflow:hidden;
+}
+.blueprint-grid{
+    display:grid;
+    grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+    gap:clamp(40px,6vw,96px);
+    align-items:center;
+}
+.blueprint .big-title{ color:#FFFFFF; }
+.blueprint .big-title em{ color:var(--brass); }
+.blueprint .body-copy{ color:rgba(234,241,247,.8); }
+.blueprint-label{
+    margin-bottom:22px;
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:rgba(234,241,247,.7);
+}
+.drawing svg{
+    width:100%;
+    height:auto;
+    overflow:visible;
+    fill:none;
+    stroke:#EAF1F7;
+    stroke-width:1.6;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+.drawing .leader{ stroke:var(--brass); stroke-width:1.3; }
+.drawing .dim{ stroke:rgba(234,241,247,.55); stroke-width:1; }
+.drawing text{
+    stroke:none;
+    fill:#FFFFFF;
+}
+.drawing .anno{
+    font-family:var(--hand);
+    font-size:30px;
+    font-weight:600;
+    fill:var(--brass);
+}
+.drawing .mono{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.12em;
+    fill:rgba(234,241,247,.75);
+}
+.js .drawing .fade{
+    opacity:0;
+    transition:opacity .8s ease var(--d,0s);
+}
+.js .drawing.in .fade{ opacity:1; }
+
+/* =========================================================
+   CONTACT — A LETTER
+   ========================================================= */
+.contact{
+    padding:clamp(90px,10vw,150px) 0;
+    background:var(--paper-deep);
+    border-top:1px solid var(--line);
+    scroll-margin-top:40px;
+}
+.letter{
+    position:relative;
+    max-width:980px;
+    margin:0 auto;
+    padding:clamp(36px,6vw,84px) clamp(24px,6vw,88px) clamp(40px,5vw,72px);
+    background:var(--sheet);
+    box-shadow:0 1px 2px rgba(19,41,61,.08),0 30px 60px rgba(19,41,61,.12);
+}
+.letterhead{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+    padding-bottom:28px;
+    margin-bottom:clamp(36px,4vw,52px);
+    border-bottom:1px solid var(--line);
+}
+.postmark{
+    flex:none;
+    width:118px;
+    height:118px;
+    margin:-30px -20px 0 0;
+    color:var(--blue);
+    transform:rotate(-12deg);
+}
+.postmark svg{ width:100%; height:100%; overflow:visible; }
+.postmark .ring{ fill:none; stroke:currentColor; stroke-width:1.4; }
+.postmark text{
+    fill:currentColor;
+    font-family:var(--mono);
+    font-size:9.6px;
+    letter-spacing:.2em;
+}
+.postmark .waves{ fill:none; stroke:currentColor; stroke-width:1.2; }
+.letter h2{
+    max-width:19ch;
+    font-size:clamp(36px,4.2vw,64px);
+    line-height:1.02;
+    letter-spacing:-.03em;
+}
+.letter h2 em{ font-weight:300; color:var(--blue); }
+.letter-intro{
+    max-width:52ch;
+    margin-top:22px;
+    color:var(--ink-soft);
+}
+.letter-form{
+    margin-top:clamp(40px,5vw,60px);
+    font-family:var(--serif);
+    font-variation-settings:"SOFT" 50,"WONK" 1;
+    font-size:clamp(21px,1.9vw,27px);
+    line-height:2;
+    color:var(--ink);
+}
+.letter-form p + p{ margin-top:4px; }
+.blank{
+    width:var(--w,260px);
+    max-width:100%;
+    padding:0 6px;
+    border:0;
+    border-bottom:1.5px dashed var(--tan);
+    border-radius:0;
+    background:transparent;
+    color:var(--blue);
+    font-family:var(--hand);
+    font-size:1.25em;
+    font-weight:600;
+    line-height:1.2;
+    vertical-align:baseline;
+    transition:border-color .2s ease,background .2s ease;
+}
+.blank::placeholder{ color:#B9A994; font-weight:500; }
+.blank:focus{
+    outline:none;
+    border-bottom-style:solid;
+    border-bottom-color:var(--blue);
+    background:rgba(183,207,226,.25);
+}
+.blank:user-invalid{ border-bottom-color:#B5523E; }
+.letter-lines{
+    width:100%;
+    min-height:200px;
+    margin-top:8px;
+    padding:0 6px;
+    border:0;
+    border-radius:0;
+    resize:vertical;
+    background:transparent repeating-linear-gradient(180deg,transparent 0,transparent 47px,var(--line) 47px,var(--line) 48px);
+    color:var(--blue);
+    font-family:var(--hand);
+    font-size:30px;
+    font-weight:600;
+    line-height:48px;
+}
+.letter-lines::placeholder{ color:#B9A994; font-weight:500; }
+.letter-lines:focus{ outline:none; background-color:rgba(183,207,226,.16); }
+.letter-sign{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    margin-top:36px;
+}
+.form-status{
+    font-family:var(--sans);
+    font-size:15px;
+    line-height:1.5;
+    color:var(--muted);
+}
+.form-status.is-success{ color:#2F6B4F; }
+.form-status.is-error{ color:#A84430; }
+.honeypot{ display:none !important; }
+.nowrap{ white-space:nowrap; }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer{
+    padding:clamp(80px,9vw,130px) 0 34px;
+    background:var(--ink);
+    color:rgba(245,238,228,.72);
+}
+.footer-line{
+    font-family:var(--serif);
+    font-variation-settings:"SOFT" 50,"WONK" 1;
+    font-size:clamp(38px,6vw,96px);
+    font-weight:300;
+    line-height:1;
+    letter-spacing:-.035em;
+    color:var(--paper);
+}
+.footer-line em{ color:var(--brass); }
+.footer-thread{
+    display:block;
+    width:100%;
+    height:40px;
+    margin:clamp(30px,4vw,50px) 0 clamp(50px,6vw,80px);
+    overflow:visible;
+    fill:none;
+    stroke:var(--brass);
+    stroke-width:2;
+    stroke-linecap:round;
+}
+.footer-thread circle{ fill:var(--brass); stroke:none; }
+.footer-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:32px;
+    padding-bottom:40px;
+    border-bottom:1px solid rgba(245,238,228,.14);
+}
+.footer .wordmark-name{ color:var(--paper); }
+.footer .wordmark-sub{ color:var(--brass); }
+.footer-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px 32px;
+}
+.footer a{ text-decoration:none; transition:color .2s ease; }
+.footer a:hover{ color:var(--brass); }
+.footer-bottom{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    padding-top:26px;
+    font-size:13px;
+    color:rgba(245,238,228,.5);
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+@media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    .js .draw{ stroke-dashoffset:0; transition:none; }
+    .js .rise{ opacity:1; transform:none; transition:none; }
+    .js .marker{ background-size:100% 52%; transition:none; }
+    .js .seats .seat,
+    .js .drawing .fade{ opacity:1; transition:none; }
+    .book,.book-page-inner{ transition:none !important; }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:1080px){
+    .hello{ left:-30px; }
+}
+@media (max-width:900px){
+    .menu-toggle{ display:block; }
+    .nav{
+        position:fixed;
+        top:84px;
+        left:0;
+        right:0;
+        bottom:0;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+        padding:28px var(--gutter);
+        background:var(--paper);
+        opacity:0;
+        visibility:hidden;
+        transition:opacity .3s ease,visibility .3s;
+    }
+    .nav.is-open{ opacity:1; visibility:visible; }
+    .nav > a:not(.stamp){
+        width:100%;
+        padding:16px 0;
+        border-bottom:1px solid var(--line);
+        font-family:var(--serif);
+        font-size:32px;
+        background:none;
+    }
+    .nav .stamp{ margin-top:32px; }
+
+    .hero-grid,
+    .diagnosis-grid,
+    .seats-grid,
+    .blueprint-grid{
+        grid-template-columns:1fr;
+    }
+    .print-wrap{
+        order:-1;
+        max-width:380px;
+        margin:0 auto;
+        padding:0 22px;
+    }
+    .hello{ left:-22px; bottom:auto; top:58%; }
+    .manifesto-text .m2,
+    .manifesto-text .m3,
+    .manifesto-text .m4,
+    .manifesto-text .m5{ padding-left:0; }
+    .manifesto .note{ position:static; margin-bottom:28px; }
+    .shelf-hint{ text-align:left; }
+    .shelf-hint svg{ display:none; }
+}
+
+/* Bookshelf becomes a stack of book spines lying flat */
+@media (max-width:760px){
+    .shelf{
+        flex-direction:column;
+        align-items:stretch;
+        height:auto;
+        gap:6px;
+        padding:0;
+    }
+    .book,
+    .book:nth-child(n){
+        flex:none;
+        flex-direction:column;
+        height:auto;
+    }
+    .book:nth-child(2){ margin-right:14px; }
+    .book:nth-child(4){ margin-right:24px; }
+    .book-spine{
+        width:100%;
+        min-height:68px;
+        flex-direction:row;
+        gap:16px;
+        padding:0 20px;
+        text-align:left;
+    }
+    .book-spine::before,
+    .book-spine::after{ display:none; }
+    .book-spine-title{
+        writing-mode:horizontal-tb;
+        flex:1;
+        max-height:none;
+        font-size:21px;
+        white-space:normal;
+    }
+    .book-page{
+        display:grid;
+        grid-template-rows:0fr;
+        border-left:0;
+        transition:grid-template-rows .55s var(--ease);
+    }
+    .book.is-open .book-page{ grid-template-rows:1fr; }
+    .book-page-inner{
+        width:auto;
+        min-height:0;
+        height:auto;
+        overflow:hidden;
+        padding:0 20px;
+    }
+    .book-page-inner > :last-child{ margin-bottom:28px; }
+    .book-big-num,
+    .book-page h3{ display:none; }   /* the spine already carries the title */
+    .book-page p{ margin-top:4px; }
+    .shelf-board{ display:none; }
+    .notepad{ padding:52px 22px 36px 64px; background-image:
+        linear-gradient(90deg,transparent 44px,rgba(196,96,78,.35) 44px,rgba(196,96,78,.35) 45.5px,transparent 45.5px),
+        repeating-linear-gradient(180deg,transparent 0,transparent 47px,#D5E1EB 47px,#D5E1EB 48px); }
+    .checklist li{ line-height:1.4; padding-top:12px; padding-bottom:12px; }
+    .checklist svg{ top:12px; }
+    .letter-form .nowrap{ display:flex; align-items:baseline; gap:4px; margin:2px 0 10px; }
+    .blank{ flex:1; width:auto; min-width:0; }
+    .postmark{ width:86px; height:86px; margin:-18px -8px 0 0; }
+}
+@media (max-width:560px){
+    .header-inner{ height:74px; }
+    .nav{ top:74px; }
+    .wordmark-name{ font-size:22px; }
+    .wordmark-sub{ font-size:8.5px; letter-spacing:.28em; }
+    .hero-actions .stamp{ width:100%; justify-content:center; }
+    .hello{ display:none; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<header class="header" id="header">
+    <div class="wrap header-inner">
+        <a href="#top" class="wordmark" aria-label="Jill LaLonde Nonprofit Consulting home">
+            <span class="wordmark-name">Jill LaLonde</span>
+            <span class="wordmark-sub">Nonprofit Consulting</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">menu</button>
+        <nav class="nav" id="nav" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#services">Ways to Work</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact" class="stamp">Start a conversation</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<!-- =========================================================
+     HERO — the tangle and the clear line
+     ========================================================= -->
+<section class="hero" id="top">
+    <div class="wrap hero-grid">
+        <div>
+            <h1 class="hero-title">
+                When your organization is facing
+                <span class="tangle">complexity,<svg viewBox="0 0 600 120" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" style="--dur:2.2s;--d:.5s" d="M4 62 C 18 8, 62 10, 52 60 C 42 112, 92 112, 102 62 C 112 10, 162 10, 152 60 C 142 112, 192 112, 202 62 C 212 10, 262 10, 252 60 C 242 112, 292 112, 302 62 C 312 10, 362 10, 352 60 C 342 112, 392 112, 402 62 C 412 10, 462 10, 452 60 C 442 112, 492 112, 502 62 C 512 10, 562 10, 552 60 C 546 92, 576 80, 598 56"/></svg></span>
+                <span class="soft">I help you find a</span>
+                <span class="clear-line soft">clearer way forward.<svg viewBox="0 0 400 30" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" style="--dur:1.1s;--d:2.4s" d="M2 16 C 120 12, 260 13, 380 15 M 366 4 L 392 15 L 366 26"/></svg></span>
+            </h1>
+            <p class="hero-lede rise" style="--d:.2s">
+                I partner with mission-driven leaders and boards to strengthen strategy, leadership, governance, and organizational execution, so their organizations can navigate change and create lasting impact.
+            </p>
+            <div class="hero-actions rise" style="--d:.35s">
+                <a href="#services" class="stamp">Explore how we can work together <span aria-hidden="true">→</span></a>
+                <a href="#contact" class="scrawl-link">Start a conversation<svg viewBox="0 0 200 10" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 6 C 50 2, 110 9, 198 4"/></svg></a>
+            </div>
+        </div>
+
+        <div class="print-wrap rise" style="--d:.15s">
+            <figure class="print">
+                <span class="tape tape--l" aria-hidden="true"></span>
+                <span class="tape tape--r" aria-hidden="true"></span>
+                <img src="jill.jpg" alt="Portrait of Jill LaLonde" width="1232" height="1286">
+                <figcaption>Jill LaLonde</figcaption>
+            </figure>
+            <div class="hello" aria-hidden="true">
+                <span class="note">Hi, I’m Jill.</span>
+                <svg viewBox="0 0 84 56"><path class="draw" pathLength="1" style="--d:2.8s;--dur:.9s" d="M4 6 C 20 40, 52 50, 76 40 M 64 30 L 77 40 L 63 50"/></svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     MANIFESTO — marker highlights
+     ========================================================= -->
+<section class="manifesto" aria-label="What I do">
+    <span class="note note--brown" aria-hidden="true">in one sentence:</span>
+    <div class="wrap">
+        <p class="manifesto-text" data-reveal>
+            <span class="m1">I help mission-driven organizations</span>
+            <span class="m2"><mark class="marker" style="--d:.1s">navigate complexity,</mark></span>
+            <span class="m3"><mark class="marker marker--blue" style="--d:.5s">strengthen how they operate,</mark></span>
+            <span class="m4">and turn strategy into</span>
+            <span class="m5"><mark class="marker" style="--d:.9s">meaningful action.</mark></span>
+        </p>
+    </div>
+</section>
+
+<!-- =========================================================
+     DIAGNOSIS — the notepad
+     ========================================================= -->
+<section class="section" id="about">
+    <div class="wrap">
+        <div class="diagnosis-grid">
+            <div>
+                <span class="note" aria-hidden="true">sound familiar?</span>
+                <h2 class="big-title rise" data-reveal style="margin-top:14px">Your organization may have <em>outgrown</em> the way it has been working.</h2>
+                <p class="body-copy rise" data-reveal style="--d:.1s">
+                    You may know something needs to change without yet knowing exactly what, or how to move it forward while managing everything already on your plate.
+                </p>
+            </div>
+
+            <div class="notepad" data-reveal>
+                <span class="tape" aria-hidden="true"></span>
+                <p class="notepad-head">Perhaps you are…</p>
+                <ul class="checklist">
+                    <li>
+                        <svg viewBox="0 0 28 28" aria-hidden="true"><path class="box draw" pathLength="1" style="--d:.1s;--dur:.6s" d="M3 4 C 10 3, 18 3, 25 4 C 26 11, 25 18, 25 25 C 18 25, 10 26, 3 25 C 3 18, 2 11, 3 4"/><path class="tick draw" pathLength="1" style="--d:.6s;--dur:.5s" d="M6 15 L 12 21 L 30 -2"/></svg>
+                        Growing quickly
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 28 28" aria-hidden="true"><path class="box draw" pathLength="1" style="--d:.3s;--dur:.6s" d="M3 4 C 10 3, 18 3, 25 4 C 26 11, 25 18, 25 25 C 18 25, 10 26, 3 25 C 3 18, 2 11, 3 4"/><path class="tick draw" pathLength="1" style="--d:1s;--dur:.5s" d="M6 15 L 12 21 L 30 -2"/></svg>
+                        Navigating a leadership transition
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 28 28" aria-hidden="true"><path class="box draw" pathLength="1" style="--d:.5s;--dur:.6s" d="M3 4 C 10 3, 18 3, 25 4 C 26 11, 25 18, 25 25 C 18 25, 10 26, 3 25 C 3 18, 2 11, 3 4"/><path class="tick draw" pathLength="1" style="--d:1.4s;--dur:.5s" d="M6 15 L 12 21 L 30 -2"/></svg>
+                        Responding to a changing funding environment
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 28 28" aria-hidden="true"><path class="box draw" pathLength="1" style="--d:.7s;--dur:.6s" d="M3 4 C 10 3, 18 3, 25 4 C 26 11, 25 18, 25 25 C 18 25, 10 26, 3 25 C 3 18, 2 11, 3 4"/><path class="tick draw" pathLength="1" style="--d:1.8s;--dur:.5s" d="M6 15 L 12 21 L 30 -2"/></svg>
+                        Trying to turn an ambitious strategy into coordinated action
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <blockquote class="pull" data-reveal>
+            <svg viewBox="0 0 22 200" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" d="M18 2 C 6 4, 6 20, 6 40 L 6 160 C 6 180, 6 196, 18 198"/></svg>
+            <p class="rise">I help leaders step back, make sense of the whole organization, and determine what comes next. <strong>Then I work alongside them to make it real.</strong></p>
+        </blockquote>
+    </div>
+</section>
+
+<!-- =========================================================
+     WAYS TO WORK — the bookshelf
+     ========================================================= -->
+<section class="shelf-section" id="services">
+    <div class="wrap">
+        <div class="shelf-head">
+            <div>
+                <h2 class="big-title rise" data-reveal>Ways to work <em>together</em></h2>
+                <p class="body-copy rise" data-reveal style="--d:.1s">
+                    Flexible support for organizations navigating change, growth, complexity, and meaningful transformation.
+                </p>
+            </div>
+            <div class="shelf-hint" aria-hidden="true">
+                <span class="note">pull one off the shelf</span>
+                <svg viewBox="0 0 70 50"><path d="M8 4 C 14 30, 40 44, 62 40 M 52 32 L 63 40 L 52 48"/></svg>
+            </div>
+        </div>
+
+        <div class="shelf" id="shelf">
+            <article class="book is-open">
+                <button class="book-spine" type="button" aria-expanded="true" aria-controls="book-1">
+                    <span class="book-num">01</span>
+                    <span class="book-spine-title">Executive Advisory</span>
+                    <span class="book-dot" aria-hidden="true"></span>
+                </button>
+                <div class="book-page" id="book-1">
+                    <div class="book-page-inner">
+                        <span class="book-big-num" aria-hidden="true">01</span>
+                        <div>
+                            <h3>Executive Advisory</h3>
+                            <p>A trusted thought partner for executives navigating consequential decisions, organizational complexity, and change.</p>
+                            <a href="#contact" class="book-link">talk about this →</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="book">
+                <button class="book-spine" type="button" aria-expanded="false" aria-controls="book-2">
+                    <span class="book-num">02</span>
+                    <span class="book-spine-title">Fractional Leadership</span>
+                    <span class="book-dot" aria-hidden="true"></span>
+                </button>
+                <div class="book-page" id="book-2">
+                    <div class="book-page-inner">
+                        <span class="book-big-num" aria-hidden="true">02</span>
+                        <div>
+                            <h3>Fractional Leadership</h3>
+                            <p>Embedded COO/executive leadership to strengthen the organization, build internal capacity, and move critical priorities forward.</p>
+                            <a href="#contact" class="book-link">talk about this →</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="book">
+                <button class="book-spine" type="button" aria-expanded="false" aria-controls="book-3">
+                    <span class="book-num">03</span>
+                    <span class="book-spine-title">Strategic Planning</span>
+                    <span class="book-dot" aria-hidden="true"></span>
+                </button>
+                <div class="book-page" id="book-3">
+                    <div class="book-page-inner">
+                        <span class="book-big-num" aria-hidden="true">03</span>
+                        <div>
+                            <h3>Strategic Planning</h3>
+                            <p>Focused engagements that bring clarity to organizational direction, priorities, roles, decision-making, and execution.</p>
+                            <a href="#contact" class="book-link">talk about this →</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="book">
+                <button class="book-spine" type="button" aria-expanded="false" aria-controls="book-4">
+                    <span class="book-num">04</span>
+                    <span class="book-spine-title">Mergers &amp; Partnerships</span>
+                    <span class="book-dot" aria-hidden="true"></span>
+                </button>
+                <div class="book-page" id="book-4">
+                    <div class="book-page-inner">
+                        <span class="book-big-num" aria-hidden="true">04</span>
+                        <div>
+                            <h3>Nonprofit Mergers and Strategic Partnerships</h3>
+                            <p>Support exploring, assessing, and navigating mergers, shared services, and other forms of strategic partnership.</p>
+                            <a href="#contact" class="book-link">talk about this →</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="book">
+                <button class="book-spine" type="button" aria-expanded="false" aria-controls="book-5">
+                    <span class="book-num">05</span>
+                    <span class="book-spine-title">Workshops &amp; Retreats</span>
+                    <span class="book-dot" aria-hidden="true"></span>
+                </button>
+                <div class="book-page" id="book-5">
+                    <div class="book-page-inner">
+                        <span class="book-big-num" aria-hidden="true">05</span>
+                        <div>
+                            <h3>Workshops and Retreats</h3>
+                            <p>Thoughtfully designed and expertly facilitated sessions that help boards and teams engage in the conversations that matter, leaving with shared direction and clear next steps.</p>
+                            <a href="#contact" class="book-link">talk about this →</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="shelf-board" aria-hidden="true"></div>
+    </div>
+</section>
+
+<!-- =========================================================
+     EXPERIENCE — a seat at every side of the table
+     ========================================================= -->
+<section class="section" id="experience">
+    <div class="wrap seats-grid">
+        <div>
+            <span class="note" aria-hidden="true">every side of the table</span>
+            <h2 class="big-title rise" data-reveal style="margin-top:14px">Executive experience, <em>practical follow-through.</em></h2>
+            <p class="body-copy rise" data-reveal style="--d:.1s">
+                I bring nearly two decades of experience leading and advising mission-driven organizations across the United States and globally. I understand organizational complexity from the inside, not only as a consultant, but as an executive, fractional COO, interim leader, board partner, and educator.
+            </p>
+            <p class="lead-line rise" data-reveal style="--d:.2s">
+                My work combines big-picture thinking with the ability to translate ideas into decisions, structures, and action.
+            </p>
+        </div>
+
+        <div class="seats" data-reveal role="img" aria-label="A table with five seats: executive, fractional COO, interim leader, board partner, and educator, the roles Jill has held.">
+            <svg viewBox="40 20 630 460" aria-hidden="true">
+                <circle class="table" cx="350" cy="260" r="104"/>
+                <circle class="table-inner" cx="350" cy="260" r="84"/>
+                <text class="center-label" x="350" y="252" text-anchor="middle">the whole</text>
+                <text class="center-label" x="350" y="284" text-anchor="middle">organization</text>
+
+                <g class="seat" style="--d:.1s">
+                    <rect class="chair" style="--d:.1s" x="-28" y="-18" width="56" height="36" rx="10" transform="translate(350 118) rotate(0)"/>
+                    <text class="chair-label" x="350" y="70" text-anchor="middle">Executive</text>
+                </g>
+                <g class="seat" style="--d:.35s">
+                    <rect class="chair" style="--d:.35s" x="-28" y="-18" width="56" height="36" rx="10" transform="translate(485 216) rotate(72)"/>
+                    <text class="chair-label" x="530" y="206">Fractional COO</text>
+                </g>
+                <g class="seat" style="--d:.6s">
+                    <rect class="chair" style="--d:.6s" x="-28" y="-18" width="56" height="36" rx="10" transform="translate(433 375) rotate(144)"/>
+                    <text class="chair-label" x="468" y="436">Interim leader</text>
+                </g>
+                <g class="seat" style="--d:.85s">
+                    <rect class="chair" style="--d:.85s" x="-28" y="-18" width="56" height="36" rx="10" transform="translate(267 375) rotate(216)"/>
+                    <text class="chair-label" x="232" y="436" text-anchor="end">Board partner</text>
+                </g>
+                <g class="seat" style="--d:1.1s">
+                    <rect class="chair" style="--d:1.1s" x="-28" y="-18" width="56" height="36" rx="10" transform="translate(215 216) rotate(288)"/>
+                    <text class="chair-label" x="170" y="206" text-anchor="end">Educator</text>
+                </g>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     BUILT TO LAST — the blueprint
+     ========================================================= -->
+<section class="blueprint" aria-labelledby="lastingTitle">
+    <div class="wrap blueprint-grid">
+        <div>
+            <p class="blueprint-label">Sheet 01 — Lasting impact</p>
+            <h2 class="big-title rise" id="lastingTitle" data-reveal>Great missions deserve organizations <em>built to last.</em></h2>
+            <p class="body-copy rise" data-reveal style="--d:.1s">
+                Lasting impact requires more than commitment to the mission. It requires an organization capable of carrying it forward, with the clear strategy, strong leadership, and effective systems to turn that commitment into meaningful, sustainable action.
+            </p>
+        </div>
+
+        <div class="drawing" data-reveal role="img" aria-label="A blueprint of a building: the roof is labelled clear strategy, the columns strong leadership, and the foundation effective systems.">
+            <svg viewBox="0 0 760 470" aria-hidden="true">
+                <!-- roof -->
+                <path class="draw" pathLength="1" style="--d:.1s" d="M60 140 L 280 46 L 500 140 Z"/>
+                <path class="draw" pathLength="1" style="--d:.3s" d="M60 140 H 500 V 168 H 60 Z"/>
+                <!-- columns -->
+                <path class="draw" pathLength="1" style="--d:.5s" d="M98 168 V 320 M 138 168 V 320"/>
+                <path class="draw" pathLength="1" style="--d:.6s" d="M200 168 V 320 M 240 168 V 320"/>
+                <path class="draw" pathLength="1" style="--d:.7s" d="M320 168 V 320 M 360 168 V 320"/>
+                <path class="draw" pathLength="1" style="--d:.8s" d="M422 168 V 320 M 462 168 V 320"/>
+                <!-- steps + foundation -->
+                <path class="draw" pathLength="1" style="--d:.9s" d="M50 320 H 510 V 340 H 50 Z"/>
+                <path class="draw" pathLength="1" style="--d:1s" d="M34 340 H 526 V 360 H 34 Z"/>
+                <path class="draw" pathLength="1" style="--d:1.1s" d="M18 360 H 542 V 388 H 18 Z"/>
+                <!-- dimension line -->
+                <path class="dim draw" pathLength="1" style="--d:1.3s" d="M18 418 H 542 M 18 408 V 428 M 542 408 V 428"/>
+                <text class="mono fade" style="--d:1.5s" x="280" y="446" text-anchor="middle">BUILT TO LAST</text>
+
+                <!-- annotations -->
+                <path class="leader draw" pathLength="1" style="--d:1.5s" d="M390 92 L 560 70"/>
+                <circle class="fade" style="--d:1.5s" cx="390" cy="92" r="4" fill="#E7C07C" stroke="none"/>
+                <text class="anno fade" style="--d:1.8s" x="570" y="78">clear strategy</text>
+
+                <path class="leader draw" pathLength="1" style="--d:1.7s" d="M462 244 L 560 226"/>
+                <circle class="fade" style="--d:1.7s" cx="462" cy="244" r="4" fill="#E7C07C" stroke="none"/>
+                <text class="anno fade" style="--d:2s" x="570" y="234">strong leadership</text>
+
+                <path class="leader draw" pathLength="1" style="--d:1.9s" d="M542 374 L 580 374"/>
+                <circle class="fade" style="--d:1.9s" cx="542" cy="374" r="4" fill="#E7C07C" stroke="none"/>
+                <text class="anno fade" style="--d:2.2s" x="590" y="382">effective systems</text>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     CONTACT — a letter to Jill
+     ========================================================= -->
+<section class="contact" id="contact" aria-labelledby="contactTitle">
+    <div class="wrap">
+        <div class="letter">
+            <div class="letterhead">
+                <span class="wordmark" aria-hidden="true">
+                    <span class="wordmark-name">Jill LaLonde</span>
+                    <span class="wordmark-sub">Nonprofit Consulting</span>
+                </span>
+                <div class="postmark" aria-hidden="true">
+                    <svg viewBox="0 0 120 120">
+                        <defs><path id="ring-path" d="M60 60 m -44 0 a 44 44 0 1 1 88 0 a 44 44 0 1 1 -88 0"/></defs>
+                        <circle class="ring" cx="60" cy="60" r="56"/>
+                        <circle class="ring" cx="60" cy="60" r="34"/>
+                        <text><textPath href="#ring-path">START A CONVERSATION · START A CONVERSATION ·</textPath></text>
+                        <path class="waves" d="M38 54 q 5.5 -5 11 0 t 11 0 t 11 0 t 11 0 M38 62 q 5.5 -5 11 0 t 11 0 t 11 0 t 11 0 M38 70 q 5.5 -5 11 0 t 11 0 t 11 0 t 11 0"/>
+                    </svg>
+                </div>
+            </div>
+
+            <h2 id="contactTitle">You don’t need all the answers <em>before reaching out.</em></h2>
+            <p class="letter-intro">
+                Helping leaders understand what they need, and shaping the right path forward, is an important part of my work.
+            </p>
+
+            <!--
+                Submissions are emailed to Jill via Web3Forms (https://web3forms.com).
+                To connect: enter Jill's email on web3forms.com, then paste the
+                access key it sends into the access_key value below.
+            -->
+            <form class="letter-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                <input type="hidden" name="subject" value="New inquiry from your website">
+                <input type="hidden" name="from_name" value="Jill LaLonde Website">
+                <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <p>Dear Jill,</p>
+                <p>
+                    My name is
+                    <label class="sr-only" for="f-name">Your name</label>
+                    <span class="nowrap"><input class="blank" id="f-name" type="text" name="name" autocomplete="name" placeholder="your name" required style="--w:240px">,</span>
+                    and I’m with
+                    <label class="sr-only" for="f-org">Organization (optional)</label>
+                    <span class="nowrap"><input class="blank" id="f-org" type="text" name="organization" autocomplete="organization" placeholder="organization (optional)" style="--w:300px">.</span>
+                </p>
+                <p>
+                    You can reach me at
+                    <label class="sr-only" for="f-email">Your email</label>
+                    <span class="nowrap"><input class="blank" id="f-email" type="email" name="email" autocomplete="email" placeholder="email address" required style="--w:320px">.</span>
+                </p>
+                <p>Here’s what’s on my mind:</p>
+                <label class="sr-only" for="f-msg">Your message</label>
+                <textarea class="letter-lines" id="f-msg" name="message" rows="4" required placeholder="where your organization is, and what you’re facing…"></textarea>
+
+                <div class="letter-sign">
+                    <button type="submit" class="stamp">Send my note <span aria-hidden="true">→</span></button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER — the line, straightened out
+     ========================================================= -->
+<footer class="footer">
+    <div class="wrap">
+        <p class="footer-line">Let’s find a <em>clearer way forward.</em></p>
+        <svg class="footer-thread" data-reveal viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true">
+            <path class="draw" pathLength="1" style="--dur:2s" d="M2 20 C 20 2, 40 38, 58 20 S 92 2, 110 22 S 140 36, 170 20 L 990 20"/>
+            <circle cx="992" cy="20" r="6"/>
+        </svg>
+        <div class="footer-row">
+            <a href="#top" class="wordmark" aria-label="Jill LaLonde Nonprofit Consulting home">
+                <span class="wordmark-name">Jill LaLonde</span>
+                <span class="wordmark-sub">Nonprofit Consulting</span>
+            </a>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="#about">About</a>
+                <a href="#services">Ways to Work</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+                <!-- Replace # with Jill's LinkedIn profile URL -->
+                <a href="#">LinkedIn</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Jill LaLonde Nonprofit Consulting. All rights reserved.</span>
+            <a href="#top">Back to top ↑</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+
+/* Header rule once the page scrolls */
+(function(){
+    const header = document.getElementById('header');
+    function update(){ header.classList.toggle('is-scrolled', window.scrollY > 10); }
+    window.addEventListener('scroll', update, { passive:true });
+    update();
+})();
+
+/* Mobile menu */
+(function(){
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('nav');
+    function setOpen(open){
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.textContent = open ? 'close' : 'menu';
+        document.body.classList.toggle('menu-open', open);
+    }
+    toggle.addEventListener('click', function(){ setOpen(!nav.classList.contains('is-open')); });
+    nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
+})();
+
+/* Hero draws itself on load; everything else as it scrolls into view */
+(function(){
+    const hero = document.querySelector('.hero');
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ hero.classList.add('in'); }); });
+
+    const targets = document.querySelectorAll('[data-reveal], .hero .rise');
+    if(!('IntersectionObserver' in window)){
+        targets.forEach(function(el){ el.classList.add('in'); });
+        return;
+    }
+    const observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+            if(!entry.isIntersecting) return;
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target);
+        });
+    }, { threshold:0.2, rootMargin:'0px 0px -8% 0px' });
+    targets.forEach(function(el){ observer.observe(el); });
+})();
+
+/* Bookshelf: one book open at a time */
+(function(){
+    const books = Array.from(document.querySelectorAll('#shelf .book'));
+    books.forEach(function(book){
+        book.querySelector('.book-spine').addEventListener('click', function(){
+            books.forEach(function(other){
+                const open = other === book;
+                other.classList.toggle('is-open', open);
+                other.querySelector('.book-spine').setAttribute('aria-expanded', String(open));
+            });
+        });
+    });
+})();
+
+/* Contact form: sends via Web3Forms, emailed to Jill */
+(function(){
+    const form = document.getElementById('contactForm');
+    const status = form.querySelector('.form-status');
+    const button = form.querySelector('button[type="submit"]');
+    const accessKey = form.querySelector('input[name="access_key"]').value;
+
+    function setStatus(message, type){
+        status.textContent = message;
+        status.className = 'form-status' + (type ? ' is-' + type : '');
+    }
+
+    form.addEventListener('submit', async function(event){
+        event.preventDefault();
+        if(!form.reportValidity()) return;
+
+        if(!accessKey || accessKey.indexOf('YOUR_') === 0){
+            setStatus('The form isn’t connected to an inbox yet.', 'error');
+            return;
+        }
+
+        button.disabled = true;
+        setStatus('Sending…');
+        try{
+            const response = await fetch(form.action, {
+                method:'POST',
+                headers:{ 'Accept':'application/json' },
+                body:new FormData(form)
+            });
+            const result = await response.json();
+            if(!response.ok || !result.success) throw new Error(result.message || 'Request failed');
+            form.reset();
+            setStatus('Thank you, your note is on its way. I’ll be in touch soon.', 'success');
+        }catch(error){
+            setStatus('Something went wrong sending your note. Please try again in a moment.', 'error');
+        }finally{
+            button.disabled = false;
+        }
+    });
+})();
+</script>
+</body>
+</html>

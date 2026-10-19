@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work With Me | Jill LaLonde Nonprofit Consulting</title>
+<meta name="description" content="Executive advisory, fractional leadership, strategic and operational planning, nonprofit mergers and partnerships, and workshops and retreats.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+
+<!-- main.css is still needed: it holds the --rev-* color tokens, base type,
+     header grid, statement band, closing CTA and footer -->
+<link rel="stylesheet" href="css/main.css?v=20261019a">
+
+<style>
+/* =========================================================
+   WORK WITH ME — page styles
+   (moved here from css/pages.css; only the rules this page uses)
+   Colors come from the --rev-* tokens defined in main.css.
+   ========================================================= */
+
+
+/* =========================================================
+   HEADER — links either side, wordmark centered
+   (grid and placement come from main.css)
+   ========================================================= */
+.header .header-nav{
+    gap:clamp(20px,1.9vw,32px) !important;
+}
+@media (min-width:768px){
+    .header .nav-link{
+        font-size:15.5px !important;
+    }
+    .header .nav-link-call{
+        font-size:15px !important;
+        padding-left:22px !important;
+        padding-right:22px !important;
+    }
+}
+.header .nav-link[aria-current="page"]::after{
+    transform:scaleX(1) !important;
+}
+
+/* Tablet: links move into the menu, the call-to-action stays */
+@media (min-width:768px) and (max-width:1240px){
+    .header-nav-left,
+    .header-nav-right .nav-link:not(.nav-link-call){
+        display:none !important;
+    }
+    .header .header-nav-right{
+        gap:14px !important;
+    }
+    .menu-toggle{
+        display:flex !important;
+        width:44px !important;
+        height:44px !important;
+    }
+    .mobile-menu{
+        display:flex;
+        position:fixed;
+        top:136px;
+        right:clamp(20px,3.4vw,50px);
+        z-index:9998;
+        width:min(380px,calc(100% - 40px));
+        padding:12px 24px 24px;
+        flex-direction:column;
+        background:rgba(250,247,243,.99) !important;
+        box-shadow:0 18px 42px rgba(28,23,19,.10);
+        opacity:0;
+        transform:translateY(-10px);
+        pointer-events:none;
+        transition:opacity .25s ease,transform .25s ease;
+    }
+    .mobile-menu.open{
+        opacity:1;
+        transform:translateY(0);
+        pointer-events:auto;
+    }
+    .mobile-menu a{
+        padding:15px 2px;
+        border-bottom:1px solid rgba(23,23,20,.08);
+        font-size:17px;
+    }
+}
+.mobile-menu a[aria-current="page"]{
+    color:var(--rev-blue) !important;
+}
+
+
+/* =========================================================
+   HERO — compact editorial text-only introduction
+   Slightly shorter so the next section peeks into view
+   ========================================================= */
+.pg-hero{
+    position:relative;
+    display:flex;
+    align-items:flex-start !important;
+    justify-content:center;
+    min-height:650px !important;
+    padding:225px clamp(20px,5vw,80px) 46px !important;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 18% 18%, rgba(221,184,117,.12), transparent 28%),
+        radial-gradient(circle at 82% 82%, rgba(79,127,155,.10), transparent 30%),
+        #F7F3EB;
+    color:var(--rev-navy-deep);
+    border-bottom:1px solid rgba(16,35,53,.08);
+}
+.pg-hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    width:min(1180px,calc(100% - 40px));
+    height:1px;
+    transform:translateX(-50%);
+    background:rgba(16,35,53,.10);
+}
+.pg-hero::after{
+    content:"";
+    position:absolute;
+    width:390px;
+    height:390px;
+    right:-205px;
+    top:54px;
+    border:1px solid rgba(16,35,53,.07);
+    border-radius:50%;
+    pointer-events:none;
+}
+.pg-hero-bg,
+.pg-hero-shade{
+    display:none !important;
+}
+.pg-hero-content{
+    position:relative;
+    z-index:2;
+    width:min(100%,940px);
+    margin:0 auto !important;
+    padding:0;
+    text-align:center;
+    transform:none !important;
+}
+.pg-hero h1{
+    max-width:15ch;
+    margin:0 auto;
+    color:var(--rev-navy-deep);
+    font-size:clamp(36px,4.25vw,58px) !important;
+    line-height:1.01;
+    letter-spacing:-.042em;
+    text-wrap:balance;
+}
+.pg-hero-accent{
+    color:#B4874A;
+}
+.pg-hero-lede{
+    max-width:620px;
+    margin:18px auto 0;
+    color:#5F615E;
+    font-size:clamp(15.5px,1.12vw,17px);
+    line-height:1.68;
+}
+.pg-hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    margin-top:22px;
+}
+.pg-hero-btn,
+.pg-hero-link{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:220px;
+    min-height:50px;
+    padding:0 28px;
+    border-radius:3px;
+    font-size:14px;
+    font-weight:700 !important;
+    line-height:1;
+    text-decoration:none;
+    transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease;
+}
+.pg-hero-btn{
+    border:1px solid var(--rev-navy-deep);
+    background:var(--rev-navy-deep);
+    color:#FFF9F2 !important;
+}
+.pg-hero-btn:hover{
+    background:#214158;
+    border-color:#214158;
+    transform:translateY(-2px);
+}
+.pg-hero-link{
+    border:1px solid var(--rev-navy-deep);
+    background:transparent;
+    color:var(--rev-navy-deep) !important;
+}
+.pg-hero-link:hover{
+    background:var(--rev-navy-deep);
+    border-color:var(--rev-navy-deep);
+    color:#FFF9F2 !important;
+    transform:translateY(-2px);
+}
+@media (max-width:767px){
+    .pg-hero{
+        min-height:auto !important;
+        padding:140px 22px 52px !important;
+        align-items:flex-start !important;
+    }
+    .pg-hero::after{
+        width:250px;
+        height:250px;
+        right:-165px;
+        top:34px;
+    }
+    .pg-hero h1{
+        max-width:13ch;
+        font-size:clamp(32px,9.8vw,46px) !important;
+    }
+    .pg-hero-lede{
+        margin-top:17px;
+        font-size:15.5px;
+        line-height:1.62;
+    }
+    .pg-hero-actions{
+        flex-direction:column;
+        align-items:stretch;
+        width:min(100%,340px);
+        margin:22px auto 0;
+        gap:12px;
+    }
+    .pg-hero-btn,
+    .pg-hero-link{
+        width:100%;
+        justify-content:center;
+    }
+}
+
+
+/* =========================================================
+   THE FIVE AREAS — magazine "chapters"
+   Each area opens with a wide photo banner, then
+   description / list / best-suited card.
+   ========================================================= */
+.pg-chapters{ position:relative; }
+.pg-ch{
+    padding:clamp(42px,4.8vw,64px) clamp(20px,4vw,62px) clamp(84px,9vw,120px);
+    background:var(--rev-paper-light);
+    scroll-margin-top:96px;
+}
+.pg-ch--sand{ background:#F3EEE8; }
+.pg-ch-inner{
+    max-width:1240px;
+    margin:0 auto;
+}
+
+/* photo banner */
+.pg-ch-open{
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    min-height:clamp(340px,48vh,500px);
+    margin:0;
+    overflow:hidden;
+    border-radius:4px;
+    background:var(--rev-navy-deep);
+}
+.pg-ch-open img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    max-width:none;
+    object-fit:cover;
+}
+.pg-ch-open::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(90deg,rgba(16,35,53,.86) 0%,rgba(16,35,53,.45) 55%,rgba(16,35,53,.08) 100%),
+        linear-gradient(0deg,rgba(16,35,53,.5) 0%,rgba(16,35,53,0) 60%);
+}
+.pg-ch-title{
+    position:relative;
+    z-index:2;
+    padding:clamp(28px,4vw,56px);
+}
+.pg-ch-num{
+    display:block;
+    color:var(--rev-brass-light);
+    font-family:"Fraunces",Georgia,serif;
+    font-size:clamp(60px,7.4vw,108px);
+    font-weight:600;
+    line-height:.9;
+}
+.pg-ch-title h2{
+    margin:10px 0 0;
+    color:#FFF9F2;
+    font-size:clamp(36px,4.6vw,66px) !important;
+    line-height:1.02;
+    letter-spacing:-.03em;
+    text-wrap:balance;
+}
+.pg-page .pg-ch-tagline{
+    max-width:34ch;
+    margin:14px 0 0;
+    color:var(--rev-brass-light) !important;
+    font-family:"Fraunces",Georgia,serif !important;
+    font-size:clamp(18px,1.6vw,23px) !important;
+    font-weight:600 !important;
+    line-height:1.38 !important;
+}
+
+/* description / list / best-suited card */
+.pg-ch-body{
+    display:grid;
+    grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,.85fr);
+    gap:clamp(32px,4vw,56px);
+    align-items:start;
+    margin-top:clamp(36px,4.4vw,56px);
+}
+.pg-page .pg-ch-intro{
+    margin:0;
+    color:#4E453F !important;
+    font-size:17.5px;
+    line-height:1.75;
+}
+.pg-ch .pg-more{ color:var(--rev-navy-deep); }
+.pg-page .pg-ch-label{
+    margin:0 0 12px;
+    color:#B4874A !important;
+    font-size:12px !important;
+    font-weight:700 !important;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+}
+.pg-ch-list{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.pg-page .pg-ch-list li{
+    padding:12px 0;
+    border-bottom:1px solid var(--rev-line);
+    color:var(--rev-navy-deep);
+    font-size:15.5px;
+    line-height:1.45;
+}
+.pg-ch-list li:first-child{ border-top:1px solid var(--rev-line); }
+.pg-ch-best{
+    padding:clamp(28px,2.6vw,36px);
+    border-radius:4px;
+    background:var(--rev-navy-deep);
+}
+.pg-page .pg-ch-best .pg-ch-label{ color:var(--rev-brass) !important; }
+.pg-page .pg-ch-best-text{
+    margin:0 0 26px;
+    color:#FFF9F2 !important;
+    font-family:"Fraunces",Georgia,serif !important;
+    font-size:clamp(18px,1.5vw,21px) !important;
+    font-weight:600 !important;
+    line-height:1.38 !important;
+}
+.pg-ch-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    min-height:52px;
+    padding:0 26px;
+    border-radius:3px;
+    background:var(--rev-brass);
+    color:var(--rev-navy-deep) !important;
+    font-size:14px;
+    font-weight:700 !important;
+    text-decoration:none;
+    white-space:nowrap;
+    transition:background .25s ease,transform .25s ease;
+}
+.pg-ch-btn:hover{
+    background:var(--rev-brass-light);
+    transform:translateY(-2px);
+}
+
+/* banner photo eases in as it scrolls into view (js/site.js adds the classes) */
+.pg-reveal-ready .pg-ch-open[data-reveal] img{
+    transform:scale(1.08);
+    transition:transform 1.6s cubic-bezier(.22,.8,.2,1);
+}
+.pg-reveal-ready .pg-ch-open[data-reveal].is-visible img{ transform:scale(1); }
+
+@media (max-width:1100px){
+    .pg-ch-body{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .pg-ch-text{ grid-column:1 / -1; }
+}
+@media (max-width:700px){
+    .pg-ch-open{ min-height:clamp(300px,82vw,380px); }
+    .pg-ch-body{ grid-template-columns:1fr; }
+}
+@media (prefers-reduced-motion:reduce){
+    .pg-reveal-ready .pg-ch-open[data-reveal] img{ transform:none; transition:none; }
+    .pg-ch-btn{ transition:none; }
+}
+
+
+/* =========================================================
+   "READ MORE" TOGGLE (area 04)
+   js/site.js adds .is-ready to collapse it; without JS the text shows.
+   ========================================================= */
+.pg-more{ margin-top:18px; }
+.pg-more-body{
+    display:grid;
+    grid-template-rows:1fr;
+}
+.pg-more-inner{
+    min-height:0;
+    overflow:hidden;
+}
+.pg-more.is-ready .pg-more-body{
+    grid-template-rows:0fr;
+    transition:grid-template-rows .55s cubic-bezier(.22,.8,.2,1);
+}
+.pg-more.is-ready.is-open .pg-more-body{ grid-template-rows:1fr; }
+.pg-more-inner > *:first-child{ margin-top:0 !important; }
+.pg-more-inner > * + *{ margin-top:16px !important; }
+.pg-more.is-ready.is-open .pg-more-inner{ padding-bottom:6px; }
+.pg-more-toggle{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-top:4px;
+    padding:4px 0;
+    border:0;
+    border-bottom:1.5px solid var(--rev-brass);
+    background:none;
+    color:inherit;
+    font:inherit;
+    font-family:"Satoshi","Manrope",Arial,sans-serif;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:color .2s ease;
+}
+.pg-more.is-open .pg-more-toggle{ margin-top:18px; }
+.pg-more-toggle:hover{ color:#B4874A; }
+.pg-more-toggle:focus-visible{ outline:2px solid var(--rev-blue); outline-offset:4px; }
+.pg-more-mark{
+    display:inline-block;
+    color:#B4874A;
+    transition:transform .35s ease;
+}
+.pg-more.is-open .pg-more-mark{ transform:rotate(180deg); }
+@media (prefers-reduced-motion:reduce){
+    .pg-more.is-ready .pg-more-body,
+    .pg-more-mark{ transition:none; }
+}
+
+
+/* =========================================================
+   CLOSING CTA — keep the button label on one line on phones
+   (the rest of the CTA is styled in main.css)
+   ========================================================= */
+@media (max-width:560px){
+    .pg-page .home-contact-submit{
+        width:100% !important;
+        min-width:0 !important;
+        padding:0 16px !important;
+        justify-content:center !important;
+        gap:10px !important;
+        font-size:14px !important;
+        white-space:nowrap !important;
+    }
+}
+
+
+/* =========================================================
+   CLOSING CTA — MOBILE: bigger portrait
+   Text and button on top, then Jill's photo filling the full
+   width of the card, sitting flush on the bottom edge.
+   ========================================================= */
+@media (max-width:767px){
+
+    body.pg-page .home-contact-cta-inner{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:stretch !important;
+        padding-bottom:0 !important;
+        overflow:hidden !important;
+    }
+
+    body.pg-page .home-contact-content{
+        order:1 !important;
+        position:relative !important;
+        z-index:2 !important;
+    }
+
+    body.pg-page .home-contact-visual{
+        order:2 !important;
+        position:relative !important;
+        inset:auto !important;
+        width:100% !important;
+        max-width:none !important;
+        height:auto !important;
+        min-height:0 !important;
+        margin:32px 0 0 !important;
+        padding:0 !important;
+        display:block !important;
+        transform:none !important;
+    }
+
+    /* Decorative shapes compete with the larger photo, so hide them here */
+    body.pg-page .home-contact-shape{
+        display:none !important;
+    }
+
+    body.pg-page .home-contact-portrait{
+        position:relative !important;
+        inset:auto !important;
+        top:auto !important;
+        right:auto !important;
+        bottom:auto !important;
+        left:auto !important;
+        display:block !important;
+        width:100% !important;
+        max-width:none !important;
+        height:auto !important;
+        max-height:none !important;
+        margin:0 auto !important;
+        object-fit:contain !important;
+        object-position:center bottom !important;
+        transform:none !important;
+    }
+}
+
+
+/* =========================================================
+   UTILITY
+   ========================================================= */
+.sr-only{
+    position:absolute !important;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
+    white-space:nowrap;
+}
+</style>
+</head>
+<body class="pg-page">
+<div class="page">
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<header class="header" id="siteHeader">
+    <nav class="header-nav header-nav-left" aria-label="Primary navigation left">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="work-with-me.html" class="nav-link" aria-current="page">Work With Me</a>
+        <a href="selected-work.html" class="nav-link">Selected Work</a>
+    </nav>
+
+    <a href="index.html" class="brand brand-wordmark site-wordmark" aria-label="Jill LaLonde Nonprofit Consulting home">
+        <span class="wm-name">Jill LaLonde</span>
+        <span class="wm-sub">Nonprofit Consulting</span>
+    </a>
+
+    <nav class="header-nav header-nav-right" aria-label="Primary navigation right">
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="nav-link nav-link-call">Start a Conversation</a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+            <span class="menu-icon"><span></span><span></span><span></span></span>
+        </button>
+    </nav>
+</header>
+
+<nav class="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="work-with-me.html" aria-current="page">Work With Me</a>
+    <a href="selected-work.html">Selected Work</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="mobile-menu-cta">Start a Conversation</a>
+</nav>
+
+
+<main id="top">
+
+
+<!-- =========================================================
+     PAGE HERO — clean text-only introduction
+     ========================================================= -->
+<section class="pg-hero">
+    <div class="pg-hero-content">
+        <h1>
+            Thoughtful strategy is only valuable if your organization
+            <span class="pg-hero-accent">can act on it.</span>
+        </h1>
+
+        <p class="pg-hero-lede">
+            Every engagement is shaped around the organization’s needs,
+            but most of my work falls into five areas.
+        </p>
+
+        <div class="pg-hero-actions">
+            <a href="contact.html" class="pg-hero-btn">Start a conversation</a>
+            <a href="#area-1" class="pg-hero-link">See the five areas</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     THE FIVE AREAS: one "chapter" per area
+     ========================================================= -->
+<div id="services" class="pg-chapters">
+
+<!-- AREA 01 — Executive Advisory -->
+<section class="pg-ch pg-ch--light" id="area-1" aria-labelledby="area-title-1">
+    <div class="pg-ch-inner">
+        <header class="pg-ch-open" data-reveal>
+            <img src="https://images.unsplash.com/photo-1653762374114-9ab5d7a7360a?auto=format&fit=crop&w=2000&q=80" alt="A woman in conversation with another woman at a table" loading="lazy">
+            <div class="pg-ch-title">
+                <span class="pg-ch-num">01</span>
+                <h2 id="area-title-1">Executive Advisory</h2>
+                <p class="pg-ch-tagline">A trusted partner for the decisions you cannot make in isolation.</p>
+            </div>
+        </header>
+        <div class="pg-ch-body">
+            <div class="pg-ch-text">
+                <p class="pg-ch-intro">Executive leadership can be lonely, particularly when an organization is growing, changing, or facing decisions with no obvious answer. I provide an experienced, outside perspective while staying close enough to understand the organization and its context.</p>
+            </div>
+            <div class="pg-ch-includes">
+                <p class="pg-ch-label">This may include</p>
+                <ul class="pg-ch-list">
+                    <li>Working through complex organizational decisions</li>
+                    <li>Clarifying priorities and tradeoffs</li>
+                    <li>Preparing for difficult board or team conversations</li>
+                    <li>Navigating executive and leadership dynamics</li>
+                    <li>Moving from reaction to more intentional leadership</li>
+                    <li>Holding momentum on critical priorities</li>
+                </ul>
+            </div>
+            <aside class="pg-ch-best">
+                <p class="pg-ch-label">Best suited for</p>
+                <p class="pg-ch-best-text">CEOs and executive directors who want an ongoing strategic thought partner.</p>
+                <a href="contact.html" class="pg-ch-btn">Talk about this</a>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- AREA 02 — Fractional Leadership -->
+<section class="pg-ch pg-ch--sand" id="area-2" aria-labelledby="area-title-2">
+    <div class="pg-ch-inner">
+        <header class="pg-ch-open" data-reveal>
+            <img src="https://images.unsplash.com/photo-1622675363311-3e1904dc1885?auto=format&fit=crop&w=2000&q=80" alt="A team listening to a colleague lead a discussion" loading="lazy">
+            <div class="pg-ch-title">
+                <span class="pg-ch-num">02</span>
+                <h2 id="area-title-2">Fractional Leadership</h2>
+                <p class="pg-ch-tagline">Experienced executive capacity without adding a full-time position.</p>
+            </div>
+        </header>
+        <div class="pg-ch-body">
+            <div class="pg-ch-text">
+                <p class="pg-ch-intro">I step into the organization as an embedded senior leader to help clarify direction, strengthen organizational infrastructure, develop internal capacity, and move priority initiatives forward.</p>
+            </div>
+            <div class="pg-ch-includes">
+                <p class="pg-ch-label">This may include</p>
+                <ul class="pg-ch-list">
+                    <li>Translating strategy into an operating plan</li>
+                    <li>Strengthening leadership and organizational accountability</li>
+                    <li>Clarifying roles, responsibilities, and decision-making</li>
+                    <li>Improving coordination across teams and functions</li>
+                    <li>Leading high-priority initiatives that cross organizational boundaries</li>
+                </ul>
+            </div>
+            <aside class="pg-ch-best">
+                <p class="pg-ch-label">Best suited for</p>
+                <p class="pg-ch-best-text">Organizations experiencing growth, transition, or executive capacity constraints.</p>
+                <a href="contact.html" class="pg-ch-btn">Talk about this</a>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- AREA 03 — Strategic and Operational Planning -->
+<section class="pg-ch pg-ch--light" id="area-3" aria-labelledby="area-title-3">
+    <div class="pg-ch-inner">
+        <header class="pg-ch-open" data-reveal>
+            <img src="https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?auto=format&fit=crop&w=2000&q=80" alt="Colorful sticky notes on a planning board" loading="lazy">
+            <div class="pg-ch-title">
+                <span class="pg-ch-num">03</span>
+                <h2 id="area-title-3">Strategic and Operational Planning</h2>
+                <p class="pg-ch-tagline">A clear direction and a practical plan to move it forward.</p>
+            </div>
+        </header>
+        <div class="pg-ch-body">
+            <div class="pg-ch-text">
+                <p class="pg-ch-intro">I guide organizations through strategic planning processes that clarify where they are, where they want to go, and the choices required to get there, then help translate that direction into priorities, responsibilities, and operational plans that support meaningful execution.</p>
+            </div>
+            <div class="pg-ch-includes">
+                <p class="pg-ch-label">This may include</p>
+                <ul class="pg-ch-list">
+                    <li>Comprehensive strategic planning</li>
+                    <li>Strategy refreshes and organizational assessments</li>
+                    <li>Stakeholder engagement and facilitated planning sessions</li>
+                    <li>Strategic priorities, goals, and measures of progress</li>
+                    <li>Annual and multi-year operational planning</li>
+                </ul>
+            </div>
+            <aside class="pg-ch-best">
+                <p class="pg-ch-label">Best suited for</p>
+                <p class="pg-ch-best-text">Organizations developing a new strategy, responding to significant change, or seeking a clearer connection between long-term direction and day-to-day work.</p>
+                <a href="contact.html" class="pg-ch-btn">Talk about this</a>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- AREA 04 — Nonprofit Mergers and Strategic Partnerships -->
+<section class="pg-ch pg-ch--sand" id="area-4" aria-labelledby="area-title-4">
+    <div class="pg-ch-inner">
+        <header class="pg-ch-open" data-reveal>
+            <img src="https://images.unsplash.com/photo-1758520144427-ddb02ac74e9d?auto=format&fit=crop&w=2000&q=80" alt="Two women shaking hands across a desk" loading="lazy">
+            <div class="pg-ch-title">
+                <span class="pg-ch-num">04</span>
+                <h2 id="area-title-4">Nonprofit Mergers and Strategic Partnerships</h2>
+                <p class="pg-ch-tagline">Thoughtful guidance when preserving the mission may mean reimagining the organization.</p>
+            </div>
+        </header>
+        <div class="pg-ch-body">
+            <div class="pg-ch-text">
+                <p class="pg-ch-intro">Exploring a merger, strategic partnership, or dissolution requires more than legal and financial analysis. These decisions also involve mission, people, power, governance, culture, funding, and organizational identity.</p>
+                <div class="pg-more">
+                    <div class="pg-more-body" id="more-3"><div class="pg-more-inner">
+                        <p class="pg-ch-intro">I help leaders and boards explore their options, identify and assess potential partners, and determine the path that will best protect the mission and the communities they serve. When a direction is chosen, I provide grounded support to move the organization through it with clarity, care, and integrity.</p>
+                    </div></div>
+                    <button type="button" class="pg-more-toggle" aria-expanded="true" aria-controls="more-3" data-less="Show less" hidden><span class="pg-more-label">Read more</span><span class="pg-more-mark" aria-hidden="true">↓</span></button>
+                </div>
+            </div>
+            <div class="pg-ch-includes">
+                <p class="pg-ch-label">This may include</p>
+                <ul class="pg-ch-list">
+                    <li>Organizational readiness and options assessment</li>
+                    <li>Partner exploration and identification</li>
+                    <li>Merger and partnership discernment</li>
+                    <li>Board and leadership decision-making</li>
+                    <li>Mission, culture, governance, and stakeholder considerations</li>
+                    <li>Responsible dissolution and wind-down</li>
+                </ul>
+            </div>
+            <aside class="pg-ch-best">
+                <p class="pg-ch-label">Best suited for</p>
+                <p class="pg-ch-best-text">Organizations considering whether a merger, partnership, or responsible dissolution could strengthen or preserve their mission.</p>
+                <a href="contact.html" class="pg-ch-btn">Talk about this</a>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- AREA 05 — Workshops and Retreats -->
+<section class="pg-ch pg-ch--light" id="area-5" aria-labelledby="area-title-5">
+    <div class="pg-ch-inner">
+        <header class="pg-ch-open" data-reveal>
+            <img src="https://images.unsplash.com/photo-1623303647440-967d26b95b47?auto=format&fit=crop&w=2000&q=80" alt="A group working around a table with papers" loading="lazy">
+            <div class="pg-ch-title">
+                <span class="pg-ch-num">05</span>
+                <h2 id="area-title-5">Workshops and Retreats</h2>
+                <p class="pg-ch-tagline">The conversations that matter, designed to lead somewhere.</p>
+            </div>
+        </header>
+        <div class="pg-ch-body">
+            <div class="pg-ch-text">
+                <p class="pg-ch-intro">I facilitate focused experiences that allow teams and boards to step away from day-to-day demands, engage honestly, and build shared direction.</p>
+            </div>
+            <div class="pg-ch-includes">
+                <p class="pg-ch-label">Sessions may focus on</p>
+                <ul class="pg-ch-list">
+                    <li>Strategic priorities</li>
+                    <li>Board and staff alignment</li>
+                    <li>Organizational roles and decision-making</li>
+                    <li>Leadership team effectiveness</li>
+                    <li>Scenario planning</li>
+                    <li>Strategy implementation</li>
+                    <li>Growth and organizational readiness</li>
+                    <li>Navigating a significant transition</li>
+                </ul>
+            </div>
+            <aside class="pg-ch-best">
+                <p class="pg-ch-label">Every engagement</p>
+                <p class="pg-ch-best-text">Each engagement includes thoughtful preparation, facilitation, and clear synthesis of decisions and next steps.</p>
+                <a href="contact.html" class="pg-ch-btn">Talk about this</a>
+            </aside>
+        </div>
+    </div>
+</section>
+
+</div>
+
+
+<!-- =========================================================
+     STATEMENT
+     ========================================================= -->
+<section class="home-message" aria-label="A belief that shapes the work">
+    <div class="home-message-shell">
+        <div class="home-message-inner">
+            <p class="home-message-statement">
+                <span class="message-line message-line--base">Strategy without</span>
+                <span class="message-line message-line--accent message-line--offset-one">execution</span>
+                <span class="message-line message-line--accent message-line--offset-two">is only</span>
+                <span class="message-line message-line--accent message-line--final">aspiration.</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     CLOSING CALL TO ACTION — same as the homepage
+     ========================================================= -->
+<section class="home-final-cta home-contact-cta" aria-label="Start a conversation">
+    <div class="home-contact-cta-inner">
+        <div class="home-contact-visual" aria-hidden="true">
+            <div class="home-contact-shape home-contact-shape--one"></div>
+            <div class="home-contact-shape home-contact-shape--two"></div>
+            <img src="jill-cta.png" alt="" class="home-contact-portrait">
+        </div>
+        <div class="home-contact-content">
+            <h2>You don’t need all the answers before reaching out.</h2>
+            <p class="home-contact-intro">
+                Helping leaders understand what they need, and shaping the right path forward, is an important part of my work.
+            </p>
+            <a href="contact.html" class="home-contact-submit">Start a conversation</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="site-footer" aria-label="Site footer">
+    <div class="site-footer-inner">
+        <div class="site-footer-brand-wrap">
+            <a href="index.html" class="site-footer-brand site-wordmark" aria-label="Jill LaLonde Nonprofit Consulting home">
+                <span class="wm-name">Jill LaLonde</span>
+                <span class="wm-sub">Nonprofit Consulting</span>
+            </a>
+            <p class="site-footer-tagline">Strategic guidance for mission-driven leaders and organizations.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="work-with-me.html">Work With Me</a>
+            <a href="selected-work.html">Selected Work</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="site-footer-connect">
+            <span class="site-footer-connect-label">Connect</span>
+            <div class="site-footer-connect-links">
+                <a href="contact.html">Email</a>
+                <!-- Replace # with Jill's LinkedIn profile URL -->
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+        </div>
+
+        <a href="#top" class="site-footer-top">
+            Back to top <span aria-hidden="true">↑</span>
+        </a>
+    </div>
+
+    <div class="site-footer-bottom">
+        <span>© 2026 Jill LaLonde Nonprofit Consulting.</span>
+        <span>All rights reserved.</span>
+    </div>
+</footer>
+
+</div>
+
+<script src="js/site.js?v=20261019a"></script>
+</body>
+</html>

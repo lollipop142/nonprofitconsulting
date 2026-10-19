@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About | Jill LaLonde Nonprofit Consulting</title>
+
+<meta name="description" content="For nearly two decades, Jill LaLonde has worked alongside mission-driven leaders and teams to build stronger organizations and expand their impact.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/main.css?v=20261019-about-mobile5">
+<link rel="stylesheet" href="css/pages.css?v=20261019-about-mobile5">
+
+<style>
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --navy: #17364D;
+    --navy-dark: #102C3E;
+    --blue: #4F7F9B;
+    --blue-soft: #DCE9EF;
+    --cream: #F7F3EB;
+    --warm-white: #FCFAF6;
+    --section-bg: #F8F6F1;
+    --gold: #DDB875;
+    --gold-bright: #E3B866;
+    --brown: #765B46;
+    --ink: #24333D;
+    --muted: #667680;
+    --line: rgba(23,54,77,.12);
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "Manrope", "Satoshi", Arial, sans-serif;
+    --shell: 1320px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background: var(--warm-white);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--warm-white) !important;
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+.page {
+    width: 100%;
+    overflow: clip;
+    background: var(--warm-white);
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ab-shell {
+    width: min(100%, var(--shell));
+    margin: 0 auto;
+}
+
+.ab-label {
+    display: block;
+    margin: 0 0 20px;
+    color: var(--brown);
+    font-size: .67rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}
+
+/* Header-to-hero spacing, matched to the Selected Work page */
+body main#top {
+    padding-top: 155px !important;
+}
+
+
+/* =========================================================
+   1. HERO — image card (!important beats main.css / pages.css)
+========================================================= */
+
+body .pg-hero {
+    position: relative !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 500px !important;
+    margin: 0 40px !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    overflow: hidden !important;
+    border-radius: 16px !important;
+    background: var(--navy) !important;
+    isolation: isolate !important;
+}
+
+body .pg-hero-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    object-fit: cover !important;
+    object-position: 57% 30% !important;
+    filter: saturate(.88) contrast(1.02) brightness(.88) !important;
+}
+
+body .pg-hero-shade {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23,54,77,1) 0%,
+            rgba(23,54,77,.99) 18%,
+            rgba(23,54,77,.95) 30%,
+            rgba(23,54,77,.86) 40%,
+            rgba(23,54,77,.66) 52%,
+            rgba(23,54,77,.38) 64%,
+            rgba(23,54,77,.14) 78%,
+            rgba(23,54,77,0) 100%
+        ) !important;
+}
+
+body .pg-hero::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+    background: linear-gradient(180deg, rgba(6,20,30,.02), rgba(6,20,30,.10)) !important;
+}
+
+body .pg-hero-content {
+    position: relative !important;
+    z-index: 5 !important;
+    width: min(52%, 640px) !important;
+    max-width: 640px !important;
+    min-width: 0 !important;
+    margin: 0 auto 0 0 !important;
+    padding: 68px 24px 72px 84px !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    background: transparent !important;
+    text-align: left !important;
+}
+
+body .pg-hero-content::before {
+    content: none !important;
+    display: none !important;
+}
+
+body .pg-hero-eyebrow {
+    display: block !important;
+    margin: 0 0 16px !important;
+    color: #E5B960 !important;
+    font-family: var(--sans) !important;
+    font-size: .68rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: .2em !important;
+    text-transform: uppercase !important;
+}
+
+body .pg-hero-content h1 {
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #FFFFFF !important;
+    font-family: var(--serif) !important;
+    font-size: clamp(2.1rem, 2.6vw, 2.9rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.07 !important;
+    letter-spacing: -.04em !important;
+    text-align: left !important;
+    text-wrap: balance !important;
+}
+
+body .pg-hero-accent {
+    color: var(--gold-bright) !important;
+}
+
+body .pg-hero-lede {
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 20px 0 0 !important;
+    padding: 0 !important;
+    color: rgba(255,255,255,.84) !important;
+    font-family: var(--sans) !important;
+    font-size: .95rem !important;
+    font-weight: 400 !important;
+    line-height: 1.65 !important;
+    letter-spacing: -.005em !important;
+    text-align: left !important;
+}
+
+body .pg-hero-actions {
+    width: 100% !important;
+    margin-top: 26px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+}
+
+body .pg-hero-btn,
+body .pg-hero-link {
+    min-height: 50px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: var(--sans) !important;
+    font-size: .82rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    transition: background-color .2s ease, border-color .2s ease;
+}
+
+body .pg-hero-btn {
+    min-width: 0 !important;
+    padding: 0 22px !important;
+    gap: 14px !important;
+    background: var(--gold-bright) !important;
+    color: var(--navy) !important;
+    border: 1px solid var(--gold-bright) !important;
+}
+
+body .pg-hero-btn:hover {
+    background: #E9C57B !important;
+    border-color: #E9C57B !important;
+}
+
+body .pg-hero-link {
+    min-width: 0 !important;
+    padding: 0 22px !important;
+    color: #FFFFFF !important;
+    background: rgba(255,255,255,.04) !important;
+    border: 1px solid rgba(255,255,255,.38) !important;
+}
+
+body .pg-hero-link:hover {
+    border-color: rgba(255,255,255,.75) !important;
+}
+
+
+/* =========================================================
+   SHARED BUTTONS (used in the closing CTA)
+========================================================= */
+
+.ab-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 34px;
+}
+
+.ab-btn,
+.ab-btn-ghost {
+    min-height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 26px;
+    border-radius: 8px;
+    font-family: var(--sans);
+    font-size: .84rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s ease, border-color .2s ease;
+}
+
+.ab-btn {
+    background: var(--navy);
+    color: #FFFFFF;
+    border: 1px solid var(--navy);
+}
+
+.ab-btn:hover {
+    background: #224A65;
+    border-color: #224A65;
+}
+
+.ab-btn-ghost {
+    color: var(--navy);
+    background: transparent;
+    border: 1px solid rgba(23,54,77,.28);
+}
+
+.ab-btn-ghost:hover {
+    border-color: var(--navy);
+}
+
+
+/* =========================================================
+   2. MY STORY — open book
+========================================================= */
+
+.ab-story {
+    padding: 96px 40px 112px;
+    background: var(--section-bg);
+}
+
+.ab-book {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 16px 16px 20px;
+    background: var(--navy);
+    border-radius: 10px;
+    box-shadow:
+        0 44px 70px -42px rgba(16,44,62,.55),
+        0 18px 32px -20px rgba(16,44,62,.32);
+}
+
+.ab-book::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    bottom: 20px;
+    left: 50%;
+    z-index: 3;
+    width: 1px;
+    background: rgba(23,54,77,.22);
+    pointer-events: none;
+}
+
+.ab-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+    padding: clamp(36px, 4vw, 56px) clamp(36px, 4.8vw, 76px) clamp(30px, 3.4vw, 46px);
+}
+
+.ab-page > * {
+    position: relative;
+    z-index: 1;
+}
+
+.ab-page--left {
+    border-radius: 4px 0 0 4px;
+    background: linear-gradient(90deg, #F7F2E7 0%, #FBF8F1 22%, #FAF6EE 78%, #F1EBDD 100%);
+    box-shadow:
+        -1px 1px 0 #E6DDCA,
+        -2px 2px 0 #FAF6EE,
+        -3px 3px 0 #E6DDCA,
+        -4px 4px 0 #FAF6EE,
+        -5px 5px 0 #DDD3BE;
+}
+
+.ab-page--right {
+    border-radius: 0 4px 4px 0;
+    background: linear-gradient(90deg, #F1EBDD 0%, #FAF6EE 22%, #FBF8F1 78%, #F7F2E7 100%);
+    box-shadow:
+        1px 1px 0 #E6DDCA,
+        2px 2px 0 #FAF6EE,
+        3px 3px 0 #E6DDCA,
+        4px 4px 0 #FAF6EE,
+        5px 5px 0 #DDD3BE;
+}
+
+.ab-page--left::after,
+.ab-page--right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 90px;
+    pointer-events: none;
+}
+
+.ab-page--left::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(23,54,77,.15), rgba(23,54,77,.05) 35%, rgba(23,54,77,0));
+}
+
+.ab-page--right::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(23,54,77,.15), rgba(23,54,77,.05) 35%, rgba(23,54,77,0));
+}
+
+.ab-page-head {
+    display: block;
+    padding-bottom: 16px;
+    color: var(--brown);
+    font-size: .66rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(118,91,70,.2);
+}
+
+.ab-page--right .ab-page-head {
+    text-align: right;
+}
+
+.ab-folio {
+    display: block;
+    padding-top: 18px;
+    color: rgba(23,54,77,.45);
+    font-family: var(--serif);
+    font-size: .92rem;
+}
+
+.ab-page--right .ab-folio {
+    text-align: right;
+}
+
+.ab-page-body {
+    flex: 1;
+    padding: 44px 0 40px;
+}
+
+.ab-page--left .ab-page-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ab-book-title {
+    max-width: 440px;
+    margin: 0;
+    color: var(--navy);
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 3.6vw, 3.9rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -.05em;
+    text-wrap: balance;
+}
+
+.ab-book-title span {
+    display: block;
+    color: var(--blue);
+}
+
+.ab-book-note {
+    max-width: 330px;
+    margin: 36px 0 0;
+    padding-top: 22px;
+    color: #5D6A72;
+    font-size: .92rem;
+    line-height: 1.75;
+    border-top: 1px solid rgba(23,54,77,.16);
+}
+
+.ab-page--right .ab-page-body p {
+    max-width: 600px;
+    margin: 0 0 20px;
+    color: #4E5C66;
+    font-family: var(--serif);
+    font-size: 1.02rem;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: -.005em;
+}
+
+.ab-dropcap::first-letter {
+    float: left;
+    margin: 7px 10px 0 0;
+    color: var(--navy);
+    font-family: var(--serif);
+    font-size: 4.1rem;
+    font-weight: 600;
+    line-height: .76;
+}
+
+.ab-book-close {
+    max-width: 600px;
+    margin: 34px 0 0;
+}
+
+.ab-page--right .ab-page-body .ab-book-close p.ab-book-pull {
+    margin: 0;
+    padding-left: 22px;
+    color: var(--navy);
+    font-size: clamp(1.15rem, 1.45vw, 1.35rem);
+    font-weight: 500;
+    line-height: 1.5;
+    border-left: 2px solid var(--gold);
+}
+
+
+/* =========================================================
+   3. HOW I WORK
+========================================================= */
+
+.ab-work {
+    padding: 0 40px 104px;
+    background: var(--warm-white);
+}
+
+.ab-work-card {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    min-height: 580px;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid rgba(23,54,77,.09);
+    border-radius: 3px;
+}
+
+.ab-work-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 56px;
+    padding: clamp(52px, 6vw, 90px) clamp(40px, 5.4vw, 84px);
+    background: var(--blue-soft);
+}
+
+.ab-work-intro h2 {
+    max-width: 500px;
+    margin: 0;
+    color: var(--navy);
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 3.5vw, 4rem);
+    font-weight: 600;
+    line-height: 1.02;
+    letter-spacing: -.05em;
+    text-wrap: balance;
+}
+
+.ab-traits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 430px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(23,54,77,.16);
+}
+
+.ab-traits li {
+    padding: 18px 0;
+    color: var(--navy);
+    font-family: var(--serif);
+    font-size: clamp(1.2rem, 1.5vw, 1.45rem);
+    font-weight: 500;
+    letter-spacing: -.02em;
+    border-bottom: 1px solid rgba(23,54,77,.16);
+}
+
+.ab-traits li:nth-child(odd) {
+    padding-right: 16px;
+}
+
+.ab-traits li:nth-child(even) {
+    padding-left: 22px;
+    border-left: 1px solid rgba(23,54,77,.16);
+}
+
+.ab-work-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(52px, 6vw, 90px) clamp(40px, 5.8vw, 92px);
+}
+
+.ab-work-body p {
+    max-width: 620px;
+    margin: 0 0 24px;
+    color: #5F6D76;
+    font-size: .98rem;
+    line-height: 1.75;
+}
+
+.ab-work-body p.ab-work-lead {
+    margin-bottom: 30px;
+    color: var(--navy);
+    font-size: clamp(1.22rem, 1.6vw, 1.52rem);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -.022em;
+}
+
+.ab-work-body p.ab-work-goal {
+    margin: 10px 0 0;
+    padding: 4px 0 4px 24px;
+    color: var(--navy);
+    font-weight: 500;
+    border-left: 2px solid var(--gold);
+}
+
+
+/* =========================================================
+   4. I BELIEVE
+========================================================= */
+
+.ab-believe {
+    padding: clamp(84px, 9vw, 132px) 40px;
+    background: var(--navy);
+    color: #FFFFFF;
+}
+
+.ab-believe-grid {
+    display: grid;
+    grid-template-columns: minmax(220px, .5fr) minmax(0, 1.5fr);
+    gap: clamp(48px, 7vw, 110px);
+    align-items: start;
+}
+
+.ab-believe-head {
+    position: sticky;
+    top: 180px;
+}
+
+.ab-believe-head .ab-label {
+    color: var(--gold);
+}
+
+.ab-believe-head h2 {
+    margin: 0;
+    color: #FFF9F0;
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 4vw, 4.4rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -.055em;
+}
+
+.ab-believe-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(255,255,255,.16);
+}
+
+.ab-believe-list li {
+    padding: clamp(24px, 2.6vw, 34px) 0;
+    color: rgba(255,255,255,.94);
+    font-family: var(--serif);
+    font-size: clamp(1.55rem, 2.5vw, 2.45rem);
+    font-weight: 400;
+    line-height: 1.22;
+    letter-spacing: -.03em;
+    text-wrap: balance;
+    border-bottom: 1px solid rgba(255,255,255,.16);
+}
+
+.ab-believe-list li em {
+    color: var(--gold-bright);
+    font-style: normal;
+}
+
+
+/* =========================================================
+   5. ORGANIZATIONS — logo strip
+========================================================= */
+
+.ab-orgs {
+    padding: 96px 0 0;
+    background: #FFFFFF;
+}
+
+.ab-orgs-head {
+    padding: 0 40px 56px;
+    text-align: center;
+}
+
+.ab-orgs-head h2 {
+    max-width: 980px;
+    margin: 0 auto;
+    color: var(--navy);
+    font-family: var(--serif);
+    font-size: clamp(2rem, 2.7vw, 2.75rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -.035em;
+    text-wrap: balance;
+}
+
+.pg-marquee {
+    position: relative !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 56px 0 !important;
+    background: #FFFFFF !important;
+    border-top: 1px solid var(--line) !important;
+    border-bottom: 1px solid var(--line) !important;
+}
+
+.pg-marquee::before,
+.pg-marquee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 4;
+    width: 90px;
+    pointer-events: none;
+}
+
+.pg-marquee::before {
+    left: 0;
+    background: linear-gradient(90deg, #FFFFFF, rgba(255,255,255,0));
+}
+
+.pg-marquee::after {
+    right: 0;
+    background: linear-gradient(270deg, #FFFFFF, rgba(255,255,255,0));
+}
+
+.pg-marquee-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: partnerMarquee 38s linear infinite;
+}
+
+.pg-marquee-list {
+    display: flex;
+    align-items: center;
+    gap: 74px;
+    min-width: max-content;
+    margin: 0;
+    padding: 0 37px;
+    list-style: none;
+}
+
+.pg-marquee-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 175px;
+    min-height: 82px;
+}
+
+.pg-marquee-list img {
+    width: auto;
+    height: var(--h, 48px);
+    max-width: 200px;
+    max-height: 80px;
+    object-fit: contain;
+    opacity: .96;
+}
+
+@keyframes partnerMarquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.pg-marquee:hover .pg-marquee-track {
+    animation-play-state: paused;
+}
+
+
+/* =========================================================
+   6. CLOSING CTA
+========================================================= */
+
+.ab-cta {
+    padding: 104px 40px 110px;
+    background: var(--warm-white);
+}
+
+.ab-cta-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ab-cta h2 {
+    margin: 0;
+    color: var(--navy);
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 3.4vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.06;
+    letter-spacing: -.045em;
+    text-wrap: balance;
+}
+
+.ab-cta p {
+    max-width: 560px;
+    margin: 22px auto 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.ab-cta .ab-hero-actions {
+    justify-content: center;
+    margin-top: 36px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    margin: 0 !important;
+    background: var(--navy-dark) !important;
+    color: rgba(255,255,255,.82) !important;
+}
+
+.site-footer a,
+.site-footer .wm-name {
+    color: rgba(255,255,255,.92) !important;
+}
+
+.site-footer .wm-sub,
+.site-footer a:hover {
+    color: var(--gold) !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE — LARGE TABLET (≤1200px)
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    body .header,
+    body #siteHeader {
+        min-height: 112px !important;
+        padding: 0 32px !important;
+    }
+
+    .header-nav-left,
+    .header-nav-right {
+        gap: 18px !important;
+    }
+
+    .header .nav-link {
+        font-size: .84rem !important;
+    }
+
+    .header .nav-link-call {
+        min-height: 50px !important;
+        padding: 0 18px !important;
+    }
+
+    body main#top {
+        padding-top: 78px !important;
+    }
+
+    body .pg-hero {
+        min-height: 420px !important;
+        margin: 0 24px !important;
+    }
+
+    body .pg-hero-content {
+        width: 60% !important;
+        padding: 44px 24px 48px 56px !important;
+    }
+
+    .ab-story {
+        padding: 80px 24px 96px;
+    }
+
+    .ab-work {
+        padding: 0 24px 96px;
+    }
+
+    .ab-work-card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ab-believe {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .ab-believe-head {
+        top: 140px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET (≤900px)
+========================================================= */
+
+@media (max-width: 900px) {
+
+    body .header,
+    body #siteHeader {
+        min-height: 80px !important;
+        grid-template-columns: 1fr auto !important;
+        padding: 0 20px !important;
+    }
+
+    .header-nav-left,
+    .header-nav-right > .nav-link {
+        display: none !important;
+    }
+
+    .header .brand {
+        justify-self: start !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    .header .wm-name {
+        font-size: 1.7rem !important;
+    }
+
+    .header .wm-sub {
+        margin-top: 6px !important;
+        font-size: .5rem !important;
+    }
+
+    /* Nav links are hidden from here down, so the menu button must show */
+    .menu-toggle {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        padding: 0 !important;
+    }
+
+    body main#top {
+        padding-top: 100px !important;
+    }
+
+    body .pg-hero-content {
+        width: 70% !important;
+        padding: 44px 24px 48px 44px !important;
+    }
+
+    /* Book: stack the two pages */
+    .ab-book {
+        grid-template-columns: 1fr;
+        padding: 12px 12px 16px;
+    }
+
+    .ab-book::after,
+    .ab-page--left::after,
+    .ab-page--right::before {
+        display: none;
+    }
+
+    .ab-page {
+        min-height: 0;
+    }
+
+    .ab-page--left,
+    .ab-page--right {
+        border-radius: 4px;
+        box-shadow: none;
+        background: #FBF8F1;
+    }
+
+    .ab-page--left {
+        margin-bottom: 10px;
+    }
+
+    .ab-page--left .ab-page-body {
+        justify-content: flex-start;
+    }
+
+    .ab-work-card,
+    .ab-believe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ab-work-card {
+        min-height: 0;
+    }
+
+    .ab-believe-head {
+        position: static;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE (≤760px)
+========================================================= */
+
+@media (max-width: 760px) {
+
+    html,
+    body {
+        overflow-x: clip !important;
+    }
+
+    /* ---------- Header ---------- */
+    body .header,
+    body #siteHeader {
+        min-height: 76px !important;
+        height: 76px !important;
+        padding: 0 18px !important;
+    }
+
+    .header .wm-name {
+        font-size: 1.55rem !important;
+        line-height: 1 !important;
+    }
+
+    .header .wm-sub {
+        margin-top: 5px !important;
+        font-size: .44rem !important;
+        letter-spacing: .25em !important;
+    }
+
+    body main#top {
+        padding-top: 94px !important;
+    }
+
+    /* ---------- Hero: single photo card, text sits at the bottom ---------- */
+    body .pg-hero {
+        min-height: 470px !important;
+        height: auto !important;
+        margin: 0 14px !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        align-items: stretch !important;
+        border-radius: 18px !important;
+    }
+
+    body .pg-hero-bg {
+        object-position: 55% 22% !important;
+        filter: saturate(.96) contrast(1.02) brightness(.94) !important;
+    }
+
+    body .pg-hero-shade {
+        background: linear-gradient(
+            180deg,
+            rgba(11,37,56,.08) 0%,
+            rgba(11,37,56,.18) 12%,
+            rgba(11,37,56,.32) 24%,
+            rgba(11,37,56,.48) 36%,
+            rgba(11,37,56,.64) 48%,
+            rgba(11,37,56,.78) 60%,
+            rgba(11,37,56,.89) 74%,
+            rgba(11,37,56,.96) 88%,
+            rgba(11,37,56,.98) 100%
+        ) !important;
+    }
+
+    body .pg-hero::after {
+        background: linear-gradient(90deg, rgba(5,24,37,.10), rgba(5,24,37,0) 48%) !important;
+    }
+
+    /* Top padding reserves room for the photo, so text never covers faces */
+    body .pg-hero-content {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 120px 22px 24px !important;
+    }
+
+    body .pg-hero-eyebrow {
+        margin: 0 0 10px !important;
+        font-size: .6rem !important;
+        letter-spacing: .18em !important;
+        text-shadow: 0 1px 12px rgba(11,37,56,.85) !important;
+    }
+
+    body .pg-hero-content h1 {
+        max-width: 17ch !important;
+        font-size: clamp(1.7rem, 6.8vw, 2.15rem) !important;
+        line-height: 1.04 !important;
+        letter-spacing: -.04em !important;
+        text-shadow: 0 2px 18px rgba(11,37,56,.6), 0 1px 3px rgba(11,37,56,.35) !important;
+    }
+
+    body .pg-hero-lede {
+        max-width: 34rem !important;
+        margin: 14px 0 0 !important;
+        font-size: .86rem !important;
+        line-height: 1.58 !important;
+        text-shadow: 0 1px 10px rgba(11,37,56,.5) !important;
+        color: rgba(255,255,255,.88) !important;
+    }
+
+    body .pg-hero-actions {
+        margin-top: 18px !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+    }
+
+    body .pg-hero-btn,
+    body .pg-hero-link {
+        width: 100% !important;
+        min-height: 46px !important;
+        padding: 0 16px !important;
+        font-size: .78rem !important;
+    }
+
+    body .pg-hero-link {
+        background: rgba(255,255,255,.06) !important;
+    }
+
+    /* ---------- My Story ---------- */
+    .ab-story {
+        padding: 58px 12px 64px;
+    }
+
+    .ab-book {
+        padding: 8px;
+        border-radius: 10px;
+        box-shadow: 0 22px 42px -28px rgba(16,44,62,.55);
+    }
+
+    .ab-page {
+        padding: 28px 22px 24px;
+    }
+
+    .ab-page--left,
+    .ab-page--right {
+        border-radius: 5px;
+    }
+
+    .ab-page--left {
+        margin-bottom: 8px;
+    }
+
+    .ab-page-body {
+        padding: 28px 0 24px;
+    }
+
+    .ab-book-title {
+        max-width: none;
+        font-size: clamp(2.15rem, 9.5vw, 2.85rem);
+        line-height: 1.02;
+    }
+
+    .ab-book-note {
+        max-width: none;
+        margin-top: 26px;
+        font-size: .9rem;
+        line-height: 1.7;
+    }
+
+    .ab-page--right .ab-page-body p {
+        max-width: none;
+        font-size: .98rem;
+        line-height: 1.75;
+    }
+
+    .ab-dropcap::first-letter {
+        font-size: 3.6rem;
+    }
+
+    .ab-page--right .ab-page-body .ab-book-close p.ab-book-pull {
+        font-size: 1.12rem;
+        line-height: 1.5;
+    }
+
+    /* ---------- How I Work ---------- */
+    .ab-work {
+        padding: 0 12px 64px;
+    }
+
+    .ab-work-card {
+        border-radius: 10px;
+    }
+
+    .ab-work-intro {
+        gap: 30px;
+        padding: 38px 22px 34px;
+    }
+
+    .ab-work-intro h2 {
+        max-width: none;
+        font-size: clamp(2.15rem, 9vw, 2.8rem);
+        line-height: 1.03;
+    }
+
+    .ab-traits {
+        max-width: none;
+    }
+
+    .ab-traits li {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 1.14rem;
+    }
+
+    .ab-work-body {
+        padding: 36px 22px 40px;
+    }
+
+    .ab-work-body p,
+    .ab-work-body p.ab-work-lead {
+        max-width: none;
+    }
+
+    .ab-work-body p.ab-work-lead {
+        font-size: 1.16rem;
+        line-height: 1.48;
+    }
+
+    /* ---------- I Believe ---------- */
+    .ab-believe {
+        padding: 60px 22px 68px;
+    }
+
+    .ab-believe-grid {
+        gap: 34px;
+    }
+
+    .ab-believe-head h2 {
+        font-size: clamp(2.55rem, 11vw, 3.4rem);
+    }
+
+    .ab-believe-list li {
+        padding: 22px 0;
+        font-size: clamp(1.32rem, 6.2vw, 1.7rem);
+        line-height: 1.24;
+    }
+
+    /* ---------- Organizations ---------- */
+    .ab-orgs {
+        padding-top: 60px;
+    }
+
+    .ab-orgs-head {
+        padding: 0 22px 34px;
+    }
+
+    .ab-orgs-head h2 {
+        font-size: clamp(1.7rem, 7.4vw, 2.15rem);
+        line-height: 1.08;
+    }
+
+    .pg-marquee {
+        padding: 32px 0 !important;
+    }
+
+    .pg-marquee::before,
+    .pg-marquee::after {
+        width: 40px;
+    }
+
+    .pg-marquee-list {
+        gap: 38px;
+        padding: 0 19px;
+    }
+
+    .pg-marquee-list li {
+        min-width: 125px;
+        min-height: 66px;
+    }
+
+    .pg-marquee-list img {
+        max-width: 150px;
+        max-height: 64px;
+    }
+
+    /* ---------- Closing CTA ---------- */
+    .ab-cta {
+        padding: 64px 22px 72px;
+    }
+
+    .ab-cta-inner {
+        max-width: none;
+        text-align: left;
+    }
+
+    .ab-cta h2 {
+        font-size: clamp(2.05rem, 9vw, 2.75rem);
+        line-height: 1.04;
+    }
+
+    .ab-cta p {
+        max-width: none;
+        margin: 18px 0 0;
+        font-size: .95rem;
+        line-height: 1.65;
+    }
+
+    .ab-hero-actions,
+    .ab-cta .ab-hero-actions {
+        margin-top: 26px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .ab-cta .ab-btn,
+    .ab-cta .ab-btn-ghost {
+        width: 100%;
+        min-height: 52px;
+        padding: 0 18px;
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer-inner {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+    }
+
+    .site-footer-nav {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 14px 24px !important;
+    }
+
+    .site-footer-top {
+        justify-self: start !important;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL PHONES (≤390px)
+========================================================= */
+
+@media (max-width: 390px) {
+
+    body .pg-hero {
+        min-height: 450px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+
+    body .pg-hero-content {
+        padding: 110px 18px 20px !important;
+    }
+
+    body .pg-hero-content h1 {
+        max-width: none !important;
+        font-size: 1.65rem !important;
+    }
+
+    .ab-page,
+    .ab-work-intro,
+    .ab-work-body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ab-traits li {
+        font-size: 1.05rem;
+    }
+
+    .ab-traits li:nth-child(even) {
+        padding-left: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .pg-marquee-track {
+        animation: none;
+    }
+
+    .ab-btn,
+    .ab-btn-ghost,
+    body .pg-hero-btn,
+    body .pg-hero-link {
+        transition: none !important;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header" id="siteHeader">
+
+    <nav class="header-nav header-nav-left" aria-label="Primary navigation left">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link" aria-current="page">About</a>
+        <a href="work-with-me.html" class="nav-link">Work With Me</a>
+        <a href="selected-work.html" class="nav-link">Selected Work</a>
+    </nav>
+
+    <a href="index.html"
+       class="brand brand-wordmark site-wordmark"
+       aria-label="Jill LaLonde Nonprofit Consulting home">
+        <span class="wm-name">Jill LaLonde</span>
+        <span class="wm-sub">Nonprofit Consulting</span>
+    </a>
+
+    <nav class="header-nav header-nav-right" aria-label="Primary navigation right">
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="nav-link nav-link-call">Start a Conversation</a>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
+            <span class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </nav>
+
+</header>
+
+<nav
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-label="Mobile navigation"
+>
+    <a href="index.html">Home</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="work-with-me.html">Work With Me</a>
+    <a href="selected-work.html">Selected Work</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="mobile-menu-cta">Start a Conversation</a>
+</nav>
+
+
+<main id="top">
+
+
+<!-- =========================================================
+     1. HERO
+========================================================= -->
+
+<section class="pg-hero" aria-labelledby="aboutTitle">
+
+    <img
+        src="about.png"
+        alt="Leadership team in a collaborative strategy discussion"
+        class="pg-hero-bg"
+    >
+
+    <div class="pg-hero-shade" aria-hidden="true"></div>
+
+    <div class="pg-hero-content">
+
+        <span class="pg-hero-eyebrow">About Jill LaLonde</span>
+
+        <h1 id="aboutTitle">
+            I help leaders navigate organizational complexity with
+            <span class="pg-hero-accent">clarity, intention, and practical action.</span>
+        </h1>
+
+        <p class="pg-hero-lede">
+            For nearly two decades, I have worked alongside
+            mission-driven leaders and teams to build stronger
+            organizations and expand their impact.
+        </p>
+
+        <div class="pg-hero-actions">
+            <a href="work-with-me.html" class="pg-hero-btn">
+                Learn how we can work together
+                <span aria-hidden="true">→</span>
+            </a>
+            <a href="contact.html" class="pg-hero-link">Start a conversation</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     2. MY STORY
+========================================================= -->
+
+<section class="ab-story" aria-labelledby="storyTitle">
+
+    <div class="ab-shell">
+
+        <div class="ab-book">
+
+            <div class="ab-page ab-page--left">
+
+                <span class="ab-page-head">My story</span>
+
+                <div class="ab-page-body">
+
+                    <h2 class="ab-book-title" id="storyTitle">
+                        Experience that spans
+                        <span>leadership, strategy, and change.</span>
+                    </h2>
+
+                    <p class="ab-book-note">
+                        Nearly two decades of work across nonprofit
+                        leadership, global development, strategy,
+                        and governance.
+                    </p>
+
+                </div>
+
+                <span class="ab-folio" aria-hidden="true">1</span>
+
+            </div>
+
+            <div class="ab-page ab-page--right">
+
+                <span class="ab-page-head">Jill LaLonde</span>
+
+                <div class="ab-page-body">
+
+                    <p class="ab-dropcap">
+                        My experience spans global development, nonprofit
+                        leadership, organizational strategy, and governance,
+                        with organizations working across the United States,
+                        Africa, Asia, the Middle East, and Central America.
+                    </p>
+
+                    <p>
+                        I spent a decade as an Executive Director, leading
+                        through significant growth and transition. That
+                        experience taught me that while nonprofits are powered
+                        by passion and commitment, they also need strong
+                        leadership, sound operations, and effective systems to
+                        advance their missions and sustain their impact.
+                    </p>
+
+                    <p>
+                        Throughout my career, I have also been deeply engaged
+                        in community-led development and in helping
+                        organizations center proximate voices in the decisions
+                        that shape their work. Alongside my consulting work,
+                        I am an Advisor and Adjunct Lecturer in Columbia
+                        University’s MS Nonprofit Management program.
+                    </p>
+
+                    <p>
+                        These experiences allow me to understand organizations
+                        from multiple perspectives: as an executive responsible
+                        for results, an advisor helping leaders see the bigger
+                        picture, and an educator exploring what effective and
+                        lasting impact requires.
+                    </p>
+
+                    <div class="ab-book-close">
+                        <p class="ab-book-pull">
+                            I bring that perspective to every partnership, helping
+                            leaders make sense of complexity, clarify what their
+                            organization needs, and create a practical path forward.
+                        </p>
+                    </div>
+
+                </div>
+
+                <span class="ab-folio" aria-hidden="true">2</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     3. HOW I WORK
+========================================================= -->
+
+<section class="ab-work" aria-labelledby="workTitle">
+
+    <div class="ab-shell ab-work-card">
+
+        <div class="ab-work-intro">
+
+            <div>
+                <span class="ab-label">How I work</span>
+                <h2 id="workTitle">
+                    A calm, honest partner in complicated moments.
+                </h2>
+            </div>
+
+            <ul class="ab-traits" aria-label="My approach">
+                <li>Curious</li>
+                <li>Direct</li>
+                <li>Grounded</li>
+                <li>Practical</li>
+            </ul>
+
+        </div>
+
+        <div class="ab-work-body">
+
+            <p class="ab-work-lead">
+                I create space for leaders and teams to step out of
+                reaction mode, speak candidly, and think more clearly
+                about what their organization needs.
+            </p>
+
+            <p>
+                My approach is curious, direct, grounded, and practical.
+                I ask questions that uncover what is really happening,
+                help people name what may have gone unspoken, and bring
+                enough structure to move the conversation toward decisions.
+            </p>
+
+            <p>
+                I am comfortable with ambiguity, but I do not leave
+                organizations there.
+            </p>
+
+            <p class="ab-work-goal">
+                The goal is not simply a thoughtful conversation or an
+                elegant strategy. It is greater clarity, stronger
+                decisions, and meaningful progress.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     4. I BELIEVE
+========================================================= -->
+
+<section class="ab-believe" aria-labelledby="believeTitle">
+
+    <div class="ab-shell ab-believe-grid">
+
+        <div class="ab-believe-head">
+            <span class="ab-label">Principles</span>
+            <h2 id="believeTitle">I believe.</h2>
+        </div>
+
+        <ul class="ab-believe-list">
+            <li>Great missions deserve equally strong organizations.</li>
+            <li>Strategy without execution is only aspiration.</li>
+            <li>Growth without infrastructure creates fragility.</li>
+            <li>Strong governance enables leadership; it should not replace it.</li>
+            <li>The best organizational solutions are built with people, not imposed on them.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     5. ORGANIZATIONS
+========================================================= -->
+
+<section class="ab-orgs" aria-labelledby="orgsTitle">
+
+    <div class="ab-orgs-head">
+        <span class="ab-label">Experience</span>
+        <h2 id="orgsTitle">Organizations I have led, advised, or partnered with</h2>
+    </div>
+
+    <div class="pg-marquee">
+
+        <div class="pg-marquee-track">
+
+            <ul class="pg-marquee-list">
+                <li><img src="images/logos/columbia-university.svg" alt="Columbia University" style="--h:43px"></li>
+                <li><img src="images/logos/cova.png" alt="Cova" style="--h:45px"></li>
+                <li><img src="images/logos/onevillage-partners.png" alt="One Village Partners" style="--h:55px"></li>
+                <li><img src="images/logos/mighty-consulting.png" alt="Mighty Consulting" style="--h:55px"></li>
+                <li><img src="images/logos/friends-of-ngong-road.png" alt="Friends of Ngong Road" style="--h:68px"></li>
+                <li><img src="images/logos/mcld.png" alt="Movement for Community-Led Development" style="--h:74px"></li>
+                <li><img src="images/logos/mali-kalanso.png" alt="Mali Kalanso" style="--h:76px"></li>
+            </ul>
+
+            <ul class="pg-marquee-list" aria-hidden="true">
+                <li><img src="images/logos/columbia-university.svg" alt="" style="--h:43px"></li>
+                <li><img src="images/logos/cova.png" alt="" style="--h:45px"></li>
+                <li><img src="images/logos/onevillage-partners.png" alt="" style="--h:55px"></li>
+                <li><img src="images/logos/mighty-consulting.png" alt="" style="--h:55px"></li>
+                <li><img src="images/logos/friends-of-ngong-road.png" alt="" style="--h:68px"></li>
+                <li><img src="images/logos/mcld.png" alt="" style="--h:74px"></li>
+                <li><img src="images/logos/mali-kalanso.png" alt="" style="--h:76px"></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     6. CLOSING CTA
+========================================================= -->
+
+<section class="ab-cta" aria-labelledby="ctaTitle">
+
+    <div class="ab-cta-inner">
+
+        <h2 id="ctaTitle">
+            You don’t need to have the solution outlined before reaching out.
+        </h2>
+
+        <p>
+            Helping leaders understand what they need, and shaping the
+            right path forward, is an important part of my work.
+        </p>
+
+        <div class="ab-hero-actions">
+            <a href="work-with-me.html" class="ab-btn">
+                Learn how we can work together
+                <span aria-hidden="true">→</span>
+            </a>
+            <a href="contact.html" class="ab-btn-ghost">Start a conversation</a>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+        <div class="site-footer-brand-wrap">
+            <a href="index.html" class="site-footer-brand site-wordmark">
+                <span class="wm-name">Jill LaLonde</span>
+                <span class="wm-sub">Nonprofit Consulting</span>
+            </a>
+            <p class="site-footer-tagline">
+                Strategic guidance for mission-driven leaders and organizations.
+            </p>
+        </div>
+
+        <nav class="site-footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="work-with-me.html">Work With Me</a>
+            <a href="selected-work.html">Selected Work</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="site-footer-connect">
+            <span class="site-footer-connect-label">Connect</span>
+            <div class="site-footer-connect-links">
+                <a href="contact.html">Email</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+
+        <a href="#top" class="site-footer-top">Back to top ↑</a>
+
+    </div>
+
+</footer>
+
+</div>
+
+<script src="js/site.js?v=20261019-about-mobile5"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    if (!menuToggle || !mobileMenu) return;
+
+    menuToggle.addEventListener("click", function () {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+        mobileMenu.classList.toggle("is-open", !isOpen);
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            mobileMenu.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation");
+        });
+    });
+
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && mobileMenu.classList.contains("is-open")) {
+            mobileMenu.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation");
+            menuToggle.focus();
+        }
+    });
+});
+</script>
+
+</body>
+</html>

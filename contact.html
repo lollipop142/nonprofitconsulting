@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Jill LaLonde Nonprofit Consulting</title>
+
+<meta name="description" content="Let’s talk about what your organization needs next.">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://api.fontshare.com">
+
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/main.css?v=20261014d">
+
+<link rel="stylesheet" href="css/pages.css?v=20261014d">
+
+
+
+<style id="contact-card-no-photo">
+
+/* =========================================================
+
+  CONTACT CARD — NO PORTRAIT
+
+  Keeps the same centered card/form layout, but removes the
+
+  floating circular Jill photo and its reserved top space.
+
+========================================================= */
+
+
+
+.pg-reach {
+
+   padding-top: clamp(64px, 7vw, 96px) !important;
+
+}
+
+
+
+.pg-reach-card {
+
+   position: relative !important;
+
+   padding-top: clamp(64px, 6vw, 86px) !important;
+
+}
+
+
+
+.pg-reach-head {
+
+   margin-top: 0 !important;
+
+   padding-top: 0 !important;
+
+}
+
+
+
+.pg-reach-head h2 {
+
+   margin-top: 0 !important;
+
+}
+
+
+
+@media (max-width: 767px) {
+
+   .pg-reach {
+
+       padding-top: 44px !important;
+
+   }
+
+
+
+   .pg-reach-card {
+
+       padding-top: 44px !important;
+
+   }
+
+}
+
+</style>
+
+
+
+
+
+<style id="contact-editorial-card-final">
+
+/* =========================================================
+
+  CONTACT — EDITORIAL OVERLAP CARD
+
+  Navy upper field + warm lower field + centered ivory card
+
+========================================================= */
+
+
+
+body.pg-page,
+
+body {
+
+   background:#F7F3EB !important;
+
+}
+
+
+
+#top {
+
+   background:#F7F3EB !important;
+
+}
+
+
+
+.pg-reach {
+
+   position:relative !important;
+
+   margin:0 !important;
+
+   padding:110px 24px 110px !important;
+
+   background:
+
+       linear-gradient(
+
+           to bottom,
+
+           #102C3E 0,
+
+           #102C3E 350px,
+
+           #F7F3EB 350px,
+
+           #F7F3EB 100%
+
+       ) !important;
+
+}
+
+
+
+.pg-reach-card {
+
+   width:min(100%, 1080px) !important;
+
+   margin:0 auto !important;
+
+   padding:88px 90px 84px !important;
+
+   background:#FCFAF6 !important;
+
+   border:1px solid rgba(23,54,77,.08) !important;
+
+   border-radius:8px !important;
+
+   box-shadow:0 28px 70px rgba(20,37,49,.10) !important;
+
+   overflow:hidden !important;
+
+}
+
+
+
+.pg-reach-head {
+
+   width:min(100%, 720px) !important;
+
+   margin:0 auto 58px !important;
+
+   padding:0 !important;
+
+   text-align:center !important;
+
+}
+
+
+
+.pg-reach-head h2 {
+
+   max-width:640px !important;
+
+   margin:0 auto 22px !important;
+
+   color:#17364D !important;
+
+   font-family:"Fraunces", Georgia, serif !important;
+
+   font-size:clamp(2.7rem,4.5vw,4.5rem) !important;
+
+   font-weight:600 !important;
+
+   line-height:.98 !important;
+
+   letter-spacing:-.045em !important;
+
+   text-wrap:balance !important;
+
+}
+
+
+
+.pg-reach-head p {
+
+   max-width:690px !important;
+
+   margin:0 auto !important;
+
+   color:#6A625D !important;
+
+   font-size:clamp(.98rem,1.15vw,1.12rem) !important;
+
+   line-height:1.7 !important;
+
+   text-wrap:balance !important;
+
+}
+
+
+
+.pg-form {
+
+   width:100% !important;
+
+   max-width:860px !important;
+
+   margin:0 auto !important;
+
+}
+
+
+
+.pg-form-row {
+
+   display:grid !important;
+
+   grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+
+   gap:24px !important;
+
+}
+
+
+
+.pg-field {
+
+   display:block !important;
+
+   margin:0 0 24px !important;
+
+}
+
+
+
+.pg-field > span,
+
+.pg-field > label,
+
+.pg-field span:first-child {
+
+   display:block !important;
+
+   margin:0 0 10px !important;
+
+   color:#2C2927 !important;
+
+   font-size:.92rem !important;
+
+   font-weight:700 !important;
+
+   line-height:1.25 !important;
+
+}
+
+
+
+.pg-field em {
+
+   color:#756E69 !important;
+
+   font-style:normal !important;
+
+   font-weight:400 !important;
+
+}
+
+
+
+.pg-field input,
+
+.pg-field textarea,
+
+.pg-field select {
+
+   width:100% !important;
+
+   border:1px solid transparent !important;
+
+   border-radius:5px !important;
+
+   background:#F1ECE6 !important;
+
+   color:#24333D !important;
+
+   font:inherit !important;
+
+   outline:none !important;
+
+   transition:border-color .2s ease, *background* .2s ease, box-shadow .2s ease !important;
+
+}
+
+
+
+.pg-field input,
+
+.pg-field select {
+
+   min-height:64px !important;
+
+   padding:0 18px !important;
+
+}
+
+
+
+.pg-field textarea {
+
+   min-height:150px !important;
+
+   padding:18px !important;
+
+   resize:vertical !important;
+
+}
+
+
+
+.pg-field input:focus,
+
+.pg-field textarea:focus,
+
+.pg-field select:focus {
+
+   border-color:#4F7F9B !important;
+
+   background:#FFFDFC !important;
+
+   box-shadow:0 0 0 3px rgba(79,127,155,.10) !important;
+
+}
+
+
+
+.pg-field input::placeholder,
+
+.pg-field textarea::placeholder {
+
+   color:#AAA19A !important;
+
+}
+
+
+
+.pg-chips {
+
+   display:flex !important;
+
+   flex-wrap:wrap !important;
+
+   gap:10px !important;
+
+}
+
+
+
+.pg-chip {
+
+   margin:0 !important;
+
+}
+
+
+
+.pg-chip input {
+
+   position:absolute !important;
+
+   opacity:0 !important;
+
+   pointer-events:none !important;
+
+}
+
+
+
+.pg-chip span {
+
+   display:inline-flex !important;
+
+   align-items:center !important;
+
+   min-height:42px !important;
+
+   padding:0 15px !important;
+
+   margin:0 !important;
+
+   border:1px solid rgba(23,54,77,.18) !important;
+
+   border-radius:999px !important;
+
+   background:#FCFAF6 !important;
+
+   color:#17364D !important;
+
+   font-size:.82rem !important;
+
+   font-weight:600 !important;
+
+   cursor:pointer !important;
+
+}
+
+
+
+.pg-chip input:checked + span {
+
+   background:#17364D !important;
+
+   border-color:#17364D !important;
+
+   color:#FFFFFF !important;
+
+}
+
+
+
+.contact-actions {
+
+   display:flex !important;
+
+   align-items:center !important;
+
+   gap:20px !important;
+
+   margin-top:8px !important;
+
+}
+
+
+
+.contact-submit {
+
+   min-height:56px !important;
+
+   padding:0 28px !important;
+
+   border:1px solid #17364D !important;
+
+   border-radius:4px !important;
+
+   background:#17364D !important;
+
+   color:#FFFFFF !important;
+
+   font-family:"Manrope","Satoshi",Arial,sans-serif !important;
+
+   font-size:.9rem !important;
+
+   font-weight:700 !important;
+
+   cursor:pointer !important;
+
+}
+
+
+
+.contact-submit:hover {
+
+   background:#2F6384 !important;
+
+   border-color:#2F6384 !important;
+
+}
+
+
+
+.contact-submit span {
+
+   display:none !important;
+
+}
+
+
+
+.contact-status {
+
+   margin:0 !important;
+
+   color:#667680 !important;
+
+   font-size:.86rem !important;
+
+}
+
+
+
+@media (max-width: 900px) {
+
+   .pg-reach {
+
+       padding:72px 20px 80px !important;
+
+       background:linear-gradient(to bottom,#102C3E 0,#102C3E 260px,#F7F3EB 260px,#F7F3EB 100%) !important;
+
+   }
+
+
+
+   .pg-reach-card {
+
+       padding:64px 48px 60px !important;
+
+   }
+
+
+
+   .pg-reach-head {
+
+       margin-bottom:44px !important;
+
+   }
+
+}
+
+
+
+@media (max-width: 640px) {
+
+   .pg-reach {
+
+       padding:44px 12px 58px !important;
+
+       background:linear-gradient(to bottom,#102C3E 0,#102C3E 190px,#F7F3EB 190px,#F7F3EB 100%) !important;
+
+   }
+
+
+
+   .pg-reach-card {
+
+       padding:44px 22px 42px !important;
+
+       border-radius:6px !important;
+
+   }
+
+
+
+   .pg-reach-head {
+
+       margin-bottom:36px !important;
+
+   }
+
+
+
+   .pg-reach-head h2 {
+
+       font-size:clamp(2.35rem,12vw,3.2rem) !important;
+
+   }
+
+
+
+   .pg-form-row {
+
+       grid-template-columns:1fr !important;
+
+       gap:0 !important;
+
+   }
+
+
+
+   .contact-actions {
+
+       align-items:stretch !important;
+
+       flex-direction:column !important;
+
+   }
+
+
+
+   .contact-submit {
+
+       width:100% !important;
+
+       justify-content:center !important;
+
+   }
+
+}
+
+</style>
+
+
+
+
+<style id="contact-blue-form-only-fix">
+.pg-reach{position:relative!important;margin:0!important;padding:220px 24px 120px!important;background:linear-gradient(to bottom,#102C3E 0,#102C3E 350px,#F7F3EB 350px,#F7F3EB 100%)!important;}
+.pg-reach-card{width:min(100%,1080px)!important;margin:0 auto!important;padding:88px 90px 84px!important;background:#FCFAF6!important;border:1px solid rgba(23,54,77,.08)!important;border-radius:8px!important;box-shadow:0 28px 70px rgba(20,37,49,.10)!important;}
+.pg-reach-head{margin:0 auto 92px!important;}
+.pg-form{width:100%!important;max-width:860px!important;margin:0 auto!important;}
+@media(max-width:900px){.pg-reach{padding:140px 20px 88px!important;background:linear-gradient(to bottom,#102C3E 0,#102C3E 260px,#F7F3EB 260px,#F7F3EB 100%)!important}.pg-reach-card{padding:64px 48px 60px!important}}
+@media(max-width:640px){.pg-reach{padding:90px 12px 64px!important;background:linear-gradient(to bottom,#102C3E 0,#102C3E 190px,#F7F3EB 190px,#F7F3EB 100%)!important}.pg-reach-card{padding:44px 22px 42px!important}}
+</style>
+
+</head>
+
+<body class="pg-page">
+
+<div class="page">
+
+
+
+<!-- =========================================================
+
+    HEADER
+
+    ========================================================= -->
+
+<header class="header" id="siteHeader">
+
+   <nav class="header-nav header-nav-left" aria-label="Primary navigation left">
+
+           <a href="index.html" class="nav-link">Home</a>
+
+           <a href="about.html" class="nav-link">About</a>
+
+           <a href="work-with-me.html" class="nav-link">Work With Me</a>
+
+           <a href="selected-work.html" class="nav-link">Selected Work</a>
+
+   </nav>
+
+
+
+   <a href="index.html" class="brand brand-wordmark site-wordmark" aria-label="Jill LaLonde Nonprofit Consulting home">
+
+       <span class="wm-name">Jill LaLonde</span>
+
+       <span class="wm-sub">Nonprofit Consulting</span>
+
+   </a>
+
+
+
+   <nav class="header-nav header-nav-right" aria-label="Primary navigation right">
+
+           <a href="resources.html" class="nav-link">Resources</a>
+
+           <a href="contact.html" class="nav-link" aria-current="page">Contact</a>
+
+       <a href="contact.html" class="nav-link nav-link-call">Start a Conversation</a>
+
+       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+
+           <span class="menu-icon"><span></span><span></span><span></span></span>
+
+       </button>
+
+   </nav>
+
+</header>
+
+
+
+<nav class="mobile-menu" aria-label="Mobile navigation">
+
+   <a href="index.html">Home</a>
+
+   <a href="about.html">About</a>
+
+   <a href="work-with-me.html">Work With Me</a>
+
+   <a href="selected-work.html">Selected Work</a>
+
+   <a href="resources.html">Resources</a>
+
+   <a href="contact.html" aria-current="page">Contact</a>
+
+   <a href="contact.html" class="mobile-menu-cta">Start a Conversation</a>
+
+</nav>
+
+
+
+<main id="top">
+
+
+
+<!-- =========================================================
+
+    CONTACT — one centered card with Jill's portrait on the top edge
+
+    ========================================================= -->
+
+<section class="pg-reach" id="contact" aria-labelledby="contactTitle">
+
+   <div class="pg-reach-card">
+
+       <div class="pg-reach-head">
+
+           <h2 id="contactTitle">I personally review every inquiry.</h2>
+
+           <p>I’ll follow up to let you know whether the work appears aligned with my experience and current capacity. If I am not the right fit, I may be able to recommend someone from my network.</p>
+
+       </div>
+
+
+
+       <!--
+
+           Submissions are emailed to Jill via Web3Forms (https://web3forms.com).
+
+           To connect: enter Jill's email on web3forms.com, then paste the
+
+           access key it sends into the access_key value below.
+
+       -->
+
+       <form class="pg-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+
+           <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+
+           <input type="hidden" name="subject" value="New inquiry from your website">
+
+           <input type="hidden" name="from_name" value="Jill LaLonde Website">
+
+           <input type="checkbox" name="botcheck" class="contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+
+
+           <div class="pg-form-row">
+
+               <label class="pg-field"><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
+
+               <label class="pg-field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+
+           </div>
+
+           <div class="pg-form-row">
+
+               <label class="pg-field"><span>Organization</span><input type="text" name="organization" autocomplete="organization"></label>
+
+               <label class="pg-field"><span>Role</span><input type="text" name="role" autocomplete="organization-title"></label>
+
+           </div>
+
+           <label class="pg-field"><span>Website <em>(optional)</em></span><input type="url" name="website" autocomplete="url" placeholder="https://"></label>
+
+           <label class="pg-field"><span>What is happening in your organization?</span><textarea name="message" rows="5" required></textarea></label>
+
+           <div class="pg-field">
+
+               <span id="supportLabel">What kind of support are you considering?</span>
+
+               <div class="pg-chips" role="group" aria-labelledby="supportLabel">
+
+                       <label class="pg-chip"><input type="checkbox" name="support" value="Executive Advisory"><span>Executive Advisory</span></label>
+
+                       <label class="pg-chip"><input type="checkbox" name="support" value="Fractional Leadership"><span>Fractional Leadership</span></label>
+
+                       <label class="pg-chip"><input type="checkbox" name="support" value="Strategic and Operational Planning"><span>Strategic and Operational Planning</span></label>
+
+                       <label class="pg-chip"><input type="checkbox" name="support" value="Nonprofit Mergers and Strategic Partnerships"><span>Nonprofit Mergers and Strategic Partnerships</span></label>
+
+                       <label class="pg-chip"><input type="checkbox" name="support" value="Workshops and Retreats"><span>Workshops and Retreats</span></label>
+
+                       <label class="pg-chip"><input type="checkbox" name="support" value="Not sure yet"><span>Not sure yet</span></label>
+
+               </div>
+
+           </div>
+
+           <div class="pg-form-row">
+
+               <label class="pg-field">
+
+                   <span>Desired timing</span>
+
+                   <select name="timing">
+
+                       <option value="">Select…</option>
+
+                       <option>As soon as possible</option>
+
+                       <option>Within the next 1 to 3 months</option>
+
+                       <option>In 3 to 6 months</option>
+
+                       <option>Later this year or beyond</option>
+
+                       <option>Just exploring for now</option>
+
+                   </select>
+
+               </label>
+
+               <label class="pg-field"><span>How did you hear about Jill?</span><input type="text" name="referral"></label>
+
+           </div>
+
+
+
+           <div class="contact-actions">
+
+               <button type="submit" class="contact-submit">Send message <span aria-hidden="true">→</span></button>
+
+               <p class="contact-status" role="status" aria-live="polite"></p>
+
+           </div>
+
+       </form>
+
+   </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+
+    FOOTER
+
+    ========================================================= -->
+
+<footer class="site-footer" aria-label="Site footer">
+
+   <div class="site-footer-inner">
+
+       <div class="site-footer-brand-wrap">
+
+           <a href="index.html" class="site-footer-brand site-wordmark" aria-label="Jill LaLonde Nonprofit Consulting home">
+
+               <span class="wm-name">Jill LaLonde</span>
+
+               <span class="wm-sub">Nonprofit Consulting</span>
+
+           </a>
+
+           <p class="site-footer-tagline">Strategic guidance for mission-driven leaders and organizations.</p>
+
+       </div>
+
+
+
+       <nav class="site-footer-nav" aria-label="Footer navigation">
+
+           <a href="index.html">Home</a>
+
+           <a href="about.html">About</a>
+
+           <a href="work-with-me.html">Work With Me</a>
+
+           <a href="selected-work.html">Selected Work</a>
+
+           <a href="resources.html">Resources</a>
+
+           <a href="contact.html">Contact</a>
+
+       </nav>
+
+
+
+       <div class="site-footer-connect">
+
+           <span class="site-footer-connect-label">Connect</span>
+
+           <div class="site-footer-connect-links">
+
+               <a href="contact.html">Email</a>
+
+               <!-- Replace # with Jill's LinkedIn profile URL -->
+
+               <a href="#" aria-label="LinkedIn">LinkedIn</a>
+
+           </div>
+
+       </div>
+
+
+
+       <a href="#top" class="site-footer-top">
+
+           Back to top <span aria-hidden="true">↑</span>
+
+       </a>
+
+   </div>
+
+
+
+   <div class="site-footer-bottom">
+
+       <span>© 2026 Jill LaLonde Nonprofit Consulting.</span>
+
+       <span>All rights reserved.</span>
+
+   </div>
+
+</footer>
+
+
+
+</div>
+
+
+
+<script src="js/site.js?v=20261014d"></script>
+
+</body>
+
+</html>
